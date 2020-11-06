@@ -1,0 +1,3 @@
+@mixin media($type)
+  @media (max-width: map-get($grid-breakpoints, $type) - 1px)
+    @content
