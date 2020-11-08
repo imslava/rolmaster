@@ -31,4 +31,22 @@ $(document).ready(function(){
 
 	scroll();
 
+	// отступ для шапки
+	function topPromo(){
+		var top = $('.header').height(),
+				promo = $('.promo');
+
+		promo.css('top', top);
+	}
+	topPromo();
+
+	// добавление тени для шапки
+	$(window).scroll(function () {
+		if ($(this).scrollTop() > 0) {
+			$('.header').addClass('shadow');
+		} else {
+			$('.header').removeClass('shadow');
+		}
+	});
+
 });

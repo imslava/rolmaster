@@ -1,1 +1,92 @@
-// style
+.header
+  position: fixed
+  left: 0
+  right: 0
+  top: 0
+  z-index: 100
+  background: #ffffff
+  transition: .3s
+  &.shadow
+    box-shadow: 0 0 40px 0 rgba(0,0,0,.05)
+    .header-menu__drop
+      box-shadow: 0 20px 20px 0 rgba(0,0,0,.05)
+  &-logo
+    display: block
+    width: 170px
+  &-top
+    @include flexbox
+    align-items: center
+    justify-content: space-between
+    padding: 20px 0
+  &-desc
+    color: $color-gray
+    font-size: 14px
+    max-width: 370px
+  &-mail,
+  &-phone
+    width: 170px
+    p
+      color: $color-gray
+      font-size: 14px
+    a
+      font-size: 16px
+  &-mail a
+    color: $color-red
+    border-bottom: 1px solid $color-red
+  &-phone a
+    font-weight: 700
+    color: $color-black
+  &-btn
+    display: block
+    width: 170px
+    height: 39px
+    border-radius: 4px
+    border: 1px solid $color-red
+    color: $color-red
+    font-size: 14px
+    text-align: center
+    line-height: 37px
+  &-menu
+    @include flexbox
+    align-items: center
+    border-top: 1px solid $color-light-blue
+    li
+      margin-right: 40px
+      position: relative
+      &:last-child
+        margin-right: 0
+      &.active a
+        color: $color-red
+      a
+        color: $color-black
+        @include flexbox
+        align-items: center
+        padding: 15px 0
+        img
+          margin-left: 6px
+      &:hover
+        .header-menu__drop
+          display: block
+        a:not(.header-menu__drop)
+          color: $color-red
+    &__right
+      margin-left: auto
+    &__drop
+      position: absolute
+      display: none
+      background: #fff
+      top: 50px
+      left: -20px
+      padding: 15px 20px
+      padding-right: 0
+      width: 240px
+      li
+        margin-right: 0
+        margin-bottom: 8px
+        &:last-child
+          margin-bottom: 0
+        a
+          padding: 0
+          color: $color-black !important
+          &:hover
+            color: $color-red !important
