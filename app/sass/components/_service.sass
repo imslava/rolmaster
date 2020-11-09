@@ -1,0 +1,62 @@
+.service
+  background: $color-light-blue
+  padding: 70px 0 80px
+  .title
+    margin-bottom: 60px
+  &-item
+    margin-top: 30px
+    background: #ffffff
+    border-radius: 12px
+    overflow: hidden
+    @include flexbox
+    &__img
+      width: 50%
+      background-size: cover
+      background-position: center center
+      background-repeat: no-repeat
+      background-color: #eeeeee
+      position: relative
+      &:before
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        background: linear-gradient(180deg, rgba(26, 26, 26, 0.8) 0%, rgba(26, 26, 26, 0) 66.15%)
+      h4
+        position: relative
+        z-index: 2
+        color: #ffffff
+        font-size: 28px
+        font-weight: 700
+        padding: 35px 30px
+      &-1
+        background-image: url(../img/service/1.jpg)
+        h4
+          max-width: 460px
+      &-2
+        background-image: url(../img/service/2.jpg)
+        h4
+          max-width: 510px
+      &-3
+        background-image: url(../img/service/3.jpg)
+        h4
+          max-width: 460px
+      &-4
+        background-image: url(../img/service/4.jpg)
+        h4
+          max-width: 550px
+    &__text
+      width: 50%
+      padding: 43px 30px 50px
+      h3
+        font-size: 23px
+        margin-bottom: 40px
+      p
+        margin-bottom: 40px
+        a
+          color: $color-red
+          border-bottom: 1px solid $color-red
+      .btn
+        margin-top: 50px
