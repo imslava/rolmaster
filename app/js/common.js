@@ -36,16 +36,17 @@ $(document).ready(function(){
 		var top = $('.header').height(),
 				promo = $('.promo');
 
-		promo.css('top', top);
+		promo.css('margin-top', top);
 	}
-	topPromo();
 
 	// добавление тени для шапки
 	$(window).scroll(function () {
 		if ($(this).scrollTop() > 0) {
-			$('.header').addClass('shadow');
+			$('.header').addClass('shadow fixed');
+			topPromo();
 		} else {
-			$('.header').removeClass('shadow');
+			$('.header').removeClass('shadow fixed');
+			$('.promo').css('margin-top', '0px');
 		}
 	});
 
