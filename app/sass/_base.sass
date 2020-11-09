@@ -41,3 +41,28 @@ ul
   margin: 0 auto
   position: relative
   z-index: 5
+
+.btn
+  @include flexbox
+  justify-content: flex-start
+
+.btn-red
+  @include flexbox
+  align-items: center
+  text-align: center
+  padding: 27px 24px
+  background: $color-red
+  color: #ffffff
+  font-weight: 700
+  border-radius: 7px
+  transition: .5s
+  box-shadow: 0px 20px 20px -13px rgba(255, 0, 0, 0.35)
+  &:hover
+    box-shadow: 0px 20px 20px -13px rgba(255, 0, 0, 0)
+
+.btn-icon__promo
+  width: 22px
+  height: 23px
+  display: block
+  background: url(../img/icons/icon-promo.svg) no-repeat center center
+  margin-right: 24px

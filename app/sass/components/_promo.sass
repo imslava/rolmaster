@@ -1,4 +1,36 @@
 .promo
   position: relative
-  height: 2000px
   background: $color-light-blue
+  padding: 110px 0 100px
+  h1
+    font-weight: 400
+    font-size: 40px
+    b
+      color: $color-red
+  h2
+    font-weight: 400
+    font-size: 17px
+    opacity: 0.7
+    margin: 25px 0 70px
+  &-list
+    @include flexbox
+    margin: 100px -15px 0
+    &__item
+      width: calc(100% / 3 - 30px)
+      margin: 0 15px
+      background: #ffffff
+      border-radius: 7px
+      @include flexbox
+      align-items: center
+      padding: 30px 20px
+    &__icon
+      @include flexbox
+      align-items: center
+      justify-content: center
+      width: 60px
+      height: 60px
+      border-radius: 100%
+      background: $color-light-blue
+    &__text
+      width: calc(100% - 60px)
+      padding-left: 20px
