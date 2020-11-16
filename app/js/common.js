@@ -50,4 +50,17 @@ $(document).ready(function(){
 		}
 	});
 
+	// карусель работ
+	$(".portfolio-carousel__content").slick({
+		arrows: false,
+		fade: true,
+		infinite: true,
+		dots: true,
+		appendDots: $('.portfolio-carousel__list'),
+		customPaging: function(slick,index) {
+			var title = slick.$slides.eq(index).find('.portfolio-carousel__item').data('title');
+			return title;
+		}
+	});
+
 });
