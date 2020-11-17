@@ -63,4 +63,30 @@ $(document).ready(function(){
 		}
 	});
 
+	// сертификаты
+	$(".certificates-tabs li").click(function (){
+	  var $this = $(this),
+	      id    = $this.data("tab");	
+
+	  $(".certificates-tabs li").removeClass("active");
+		$(".certificates-tabs li[data-tab=" + id + "]").addClass("active");
+
+		$('.certificates-tab').removeClass("active").hide();
+		$('.certificates-tab[data-tab=' + id + ']').addClass("active").fadeIn();
+
+	});
+
+	// тех документация
+	$(".documentation-tabs li").click(function (){
+	  var $this = $(this),
+	      id    = $this.data("tab");	
+
+	  $(".documentation-tabs li").removeClass("active");
+		$(".documentation-tabs li[data-tab=" + id + "]").addClass("active");
+
+		$('.documentation-tab').removeClass("active").hide();
+		$('.documentation-tab[data-tab=' + id + ']').addClass("active").fadeIn();
+
+	});
+
 });
