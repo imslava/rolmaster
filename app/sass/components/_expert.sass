@@ -1,0 +1,47 @@
+.expert
+  padding: 70px 0 80px
+  background: url(../img/bg-expert.jpg) no-repeat top center
+  background-size: cover
+  overflow: hidden
+  .title
+    text-align: left
+    max-width: 460px
+  &-quote
+    border-left: 3px solid $color-red
+    padding-left: 27px
+    margin: 45px 0
+    p
+      max-width: 425px
+      font-size: 20px
+      margin-bottom: 26px
+      &:last-child
+        margin-bottom: 0
+      span
+        color: $color-red
+  &-form
+    position: relative
+    &:before
+      content: ''
+      position: absolute
+      top: 84px
+      left: 5px
+      width: 54px
+      height: 52px
+      background: url(../img/icons/expert-line.svg) no-repeat
+    b
+      display: block
+      font-size: 18px
+      font-weight: 700
+      max-width: 415px
+    form
+      @include flexbox
+      align-items: center
+      padding-left: 70px
+      margin-top: 25px
+    .input
+      border: 1px solid rgba(26, 26, 26, 0.2)
+  &-man
+    position: absolute
+    bottom: -80px
+    right: 30px
+    z-index: -1
