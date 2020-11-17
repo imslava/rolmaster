@@ -1,0 +1,44 @@
+.footer
+  background: #1f1f1f
+  padding: 30px 0
+  color: $color-gray
+  .container
+    @include flexbox
+    align-items: flex-start
+    justify-content: space-between
+  &-logo
+    width: 290px
+    p
+      font-size: 12px
+      margin-top: 10px
+  &-menu
+    width: 155px
+    margin-top: -4px
+    li
+      line-height: 1.4
+      a
+        color: #ffffff
+        border-bottom: 1px solid #fff
+        font-size: 12px
+        transition: .3s
+        &:hover
+          border-bottom: 1px solid #1f1f1f
+  &-info
+    width: 130px
+    font-size: 12px
+    color: #ffffff
+    a
+      color: $color-red
+      border-bottom: 1px solid $color-red
+      transition: .3s
+      &:hover
+        border-bottom: 1px solid #1f1f1f
+  &-contact
+    width: 210px
+    text-align: right
+    p
+      font-size: 12px
+    a
+      font-size: 18px
+      font-weight: 700
+      color: #ffffff
