@@ -1,0 +1,74 @@
+.ctaKP
+  padding: 80px 0
+  background: url(../img/bg-ctakp.jpg) no-repeat center center
+  background-size: cover
+  position: relative
+  &:before
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background: radial-gradient(55.48% 62.02% at 44.03% 44.52%, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%), rgba(255, 255, 255, 0.7)
+  .title
+    text-align: left
+    max-width: 400px
+  .container
+    @include flexbox
+    align-items: flex-start
+  &-text
+    width: 585px
+  &-list
+    padding-left: 65px
+    margin-top: 40px
+    p
+      font-size: 18px
+      position: relative
+      &:before
+        content: ''
+        position: absolute
+        top: 11px
+        left: -65px
+        width: 45px
+        height: 2px
+        background: #dadada
+    ul
+      margin-top: 21px
+      li
+        position: relative
+        margin-bottom: 22px
+        padding-left: 30px
+        max-width: 440px
+        &:before
+          content: ''
+          position: absolute
+          top: 3px
+          left: 0
+          width: 14px
+          height: 14px
+          background: url(../img/icons/voice-list.svg) no-repeat
+        &:last-child
+          margin-bottom: 0
+  &-row
+    @include flexbox
+    align-items: flex-start
+    margin-top: 25px
+    margin-left: 65px
+  &-item
+    position: relative
+    padding-top: 120px
+    padding-left: 20px
+    margin-right: 40px
+    img
+      position: absolute
+      left: 0
+      top: 0
+      height: 110px
+    &:nth-child(1) img
+      top: 20px
+      height: 100px
+    &:last-child
+      margin-right: 0
+  &-form
+    margin-left: auto
