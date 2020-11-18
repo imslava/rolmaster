@@ -102,22 +102,14 @@ $(document).ready(function(){
 	});
 
 	// выбор даты
-	var date = new Date(),
-			utcMoscow = new Date(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDate(), date.getUTCHours() + 3, date.getUTCMinutes()),
-			min_Time = '"' + utcMoscow.getHours() + ":" + utcMoscow.getMinutes() + '"',
-			min_Hour = utcMoscow.getHours(),
-			min_Minute = utcMoscow.getMinutes();
-
-	$(".datetimepicker").flatpickr({
-		locale: "ru",
-		enableTime: true,
-		minTime: min_Time,
-		defaultHour: min_Hour,
-		defaultMinute: min_Minute,
-		maxTime: "23:00",
-		dateFormat: "d.m.Y H:i",
-		minDate: "today"
-	});
+	$('[data-toggle="datepicker"]').datepicker({
+    autoHide: true,
+		autoPick: true,
+		inline: true,
+		container: '.form-calendar',
+		startDate: 'today',
+    language: 'ru-RU'
+  });
 
 	$('.form-date').hide();
 

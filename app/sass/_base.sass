@@ -204,11 +204,27 @@ ul
       &:last-child p
         border-top-right-radius: 5px
         border-bottom-right-radius: 5px
+  &-calendar
+    border: 1px dashed #eee
+    .datepicker-container
+      margin: 10px auto
+      width: 325px
+    .datepicker-panel > ul > li
+      width: 47px
+    .datepicker-panel>ul>li[data-view="month current"], .datepicker-panel>ul>li[data-view="year current"], .datepicker-panel>ul>li[data-view="years current"]
+      width: 237px
+    .datepicker-panel>ul>li.picked, .datepicker-panel>ul>li.picked:hover
+      color: $color-red
+    .datepicker-panel>ul>li.picked
+      background-color: #ffe6e6
+    .datepicker-panel>ul>li.highlighted,
+    .datepicker-panel>ul>li:hover
+      background-color: #ffefef
 
-.datetimepicker
-  height: 48px
-  margin: -15px 0 0
-  width: 100%
+// .datetimepicker
+//   height: 48px
+//   margin: -15px 0 0
+//   width: 100%
       
 .popup
   display: none
