@@ -175,4 +175,25 @@ $(document).ready(function(){
 		return false;
 	}
 
+	$(function() {
+		var btnTitle = $(".form-file p").html();
+		var btnTitleHtml = $.parseHTML(btnTitle);
+		$(".form-file input:file").change(function (){
+			 console.log("im clicked" + this.files.length);
+			 if( this.files && this.files.length >= 1 ) {
+					var file = this.files[0];
+						 var reader = new FileReader();
+						 // Set preview image into the popover data-content
+						 reader.onload = function (e) {
+								$(".form-file p").text(file.name).addClass('upload');
+						 }
+						 reader.readAsDataURL(file);
+			 }
+			 else {
+					$(".form-file p").html(btnTitle).removeClass('upload');
+			 }
+				 
+		 });   
+ });
+
 });

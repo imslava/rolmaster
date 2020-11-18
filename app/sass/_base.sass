@@ -220,6 +220,18 @@ ul
     .datepicker-panel>ul>li.highlighted,
     .datepicker-panel>ul>li:hover
       background-color: #ffefef
+  &-file
+    input
+      @include visually-hidden
+    p
+      text-align: center
+      color: $color-red
+      text-decoration: underline
+      margin-top: -5px
+      cursor: pointer
+      &.upload
+        color: $color-black
+        text-decoration: none
 
 // .datetimepicker
 //   height: 48px
