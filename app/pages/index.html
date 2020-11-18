@@ -14,8 +14,70 @@
     <link rel="stylesheet" href="css/app.min.css">
   </head>
 <body>
+
+  <div class="popup" id="popup-engineer">
+    <div class="form">
+      <h3><b></b></h3>
+      <form>
+        <label class="form-label">
+          <span>Наш инженер свяжется с вами в течение<br> 7 минут и предложит варианты </span>
+        </label>
+        <label class="form-label">
+          <input type="name" class="form-input" placeholder="Как к вам обращаться?" />
+        </label>
+        <label class="form-label">
+          <input type="tel" class="form-input masked" placeholder="Введите номер телефона" />
+        </label>
+        <div class="btn"><button class="btn-red"></button></div>
+        <label class="form-politic">
+          <input type="checkbox" name="politic" checked/>
+          <span></span>
+          <p>Вы соглашаетесь с условиями обработки<br> персональных данных (<a href="politic.html">ознакомиться</a>)</p>
+        </label>
+      </form>
+    </div>
+  </div>
+
+  <div class="popup" id="popup-measurer">
+    <div class="form">
+      <h3 style="font-size: 20px"><b>Пригласите замерщика бесплатно</b></h3>
+      <form>
+        <label class="form-label">
+          <span style="color: #1A1A1A">Специалист приедет, чтобы провести все замеры<br> и подберёт для вас оптимальный вариант,<br> который прослужит десятки лет</span>
+        </label>
+        <label class="form-label">
+          <span>Менеджер свяжется с вами, чтобы уточнить удобное время для выезда замерщика к вам</span>
+          <input type="tel" class="form-input masked" placeholder="Введите номер телефона" />
+        </label>
+        <label class="form-label">
+          <span>На почту мы отправим полезные материалы по подбору профиля и самые популярные варианты рольставней, которые выбирают 9 из 10 заказчиков</span>
+          <input type="email" class="form-input" placeholder="Введите e-mail адрес" />
+        </label>
+        <label class="form-label form-time">
+          <span>Укажите удобное время для выезда замерщика</span>
+          <label class="js-close-date">
+            <input type="radio" name="time" checked />
+            <p>Как можно быстрее</p>
+          </label>
+          <label class="js-open-date">
+            <input type="radio" name="time" />
+            <p>В конкретное время</p>
+          </label>
+        </label>
+        <label class="form-label form-date">
+          <input type="text" class="form-input datetimepicker" name="date" placeholder="Выберите время и дату">
+        </label>
+        <div class="btn"><button class="btn-red">Записаться на бесплатный замер</button></div>
+        <label class="form-politic">
+          <input type="checkbox" name="politic" checked/>
+          <span></span>
+          <p>Вы соглашаетесь с условиями обработки<br> персональных данных (<a href="politic.html">ознакомиться</a>)</p>
+        </label>
+      </form>
+    </div>
+  </div>
   
-  <header class="header">
+  <header class="header fixed">
     <div class="container">
       <div class="header-top">
         <a class="header-logo" href="/"><img src="img/logo.svg" alt=""></a>
@@ -48,7 +110,7 @@
         </li>
         <li><a href="service.html">Оплата, доставка, монтаж</a></li>
         <li class="header-menu__right"><a href="calculator.html">Расчёт за 29 минут</a></li>
-        <li><a href="javascript:;">Вызвать замерщика</a></li>
+        <li><a href="javascript:;" data-fancybox data-src="#popup-measurer">Вызвать замерщика</a></li>
       </ul>
     </div>
   </header>
@@ -57,7 +119,7 @@
     <div class="container">
       <h1><i>Производим и устанавливаем</i><br> <b>стальные рольставни и ворота</b><br> любой сложности "под ключ" <i>от 5 дней</i></h1>
       <h2>По индивидуальным проектам<br> для частных и корпоративных заказчиков</h2>
-      <div class="btn"><a href="javascript:;" class="btn-red"><i class="btn-icon__promo"></i>Получить расчёт за 29 минут</a></div>
+      <div class="btn"><a href="calculator.html" class="btn-red"><i class="btn-icon__promo"></i>Получить расчёт за 29 минут</a></div>
       <img src="img/promo-rollet.png" alt="" class="promo-rollet">
       <div class="promo-rating">
         <b>Рейтинг в Яндекс и Yell</b>
@@ -114,7 +176,7 @@
           <h3>Производим профили, которые выдерживают перепады температур от -30°С до +50°С и задерживают злоумышленников</h3>
           <p>Профили Ролмастер <b>выдерживают экстремальные температуры и погодные условия</b>, даже на Камчатке.<br><br> <a href="#">Посмотреть документы испытаний</a></p>
           <p>Высокая пожаростойчивость подтверждена сертификатами КО45 и сертификат санитарных норм - для объектов общепита и т.д.<br><br> <a href="#">Посмотреть сертификат</a></p>
-          <div class="btn"><a href="javascript:;" class="btn-red">Повысить безопасность объекта</a></div>
+          <div class="btn"><a href="javascript:;" data-fancybox data-src="#popup-engineer" data-title="Повысьте безопасность вашего объекта" data-btn="Повысить безопасность объекта" class="btn-red">Повысить безопасность объекта</a></div>
         </div>
       </div>
       <div class="service-item">
@@ -122,7 +184,7 @@
         <div class="service-item__text">
           <h3>Как сделать надежную и элегантную защиту для вашей компании?</h3>
           <p>Наша продукция разрешена для использования на предприятиях общественного питания. Мы имеем богатый опыт работы с ролставнями для торговых центров <b>под разные бюджеты и с учетом специфики.</b><br><br> Нашей продукцией пользуются для своих предприятий такие бренды как:<br><br> — Бургер Кинг<br> — Перекресток<br> — Газпромбанк<br> и другие<br><br> <a href="#">Посмотреть отзывы этих компаний</a></p>
-          <div class="btn"><a href="javascript:;" class="btn-red">Соответствовать требованиям</a></div>
+          <div class="btn"><a href="javascript:;" data-fancybox data-src="#popup-engineer" data-title="Соответствуйте требованиям вашей организации" data-btn="Соответствовать требованиям" class="btn-red">Соответствовать требованиям</a></div>
         </div>
       </div>
       <div class="service-item">
@@ -130,7 +192,7 @@
         <div class="service-item__text">
           <h3>Как сделать чтобы рольставни или ворота идеально вписывались в дизайн-проект или брендбук?</h3>
           <p>Выкрасим профили в любой из 300 цветовых решений  для вашего дизайн-проекта<br><br> Нанесём фактуру с имитацией под дерево или камень<br><br> Фактура и цвета изделий имеют высокую устойчивость к влиянию солнца, влаги, механическим воздействиям. Однородность цвета и фактуры сохраняется более 5 лет</p>
-          <div class="btn"><a href="javascript:;" class="btn-red">Декорировать ворота или рольставни</a></div>
+          <div class="btn"><a href="javascript:;" data-fancybox data-src="#popup-engineer" data-title="Декорируйте рольставни или ворота под дизайн проект" data-btn="Декорировать ворота или рольставни" class="btn-red">Декорировать ворота или рольставни</a></div>
         </div>
       </div>
       <div class="service-item">
@@ -138,7 +200,7 @@
         <div class="service-item__text">
           <h3>Как быть спокойным за свое имещество когда дома никого нет?</h3>
           <p>Стальные рольставни и ворота выдерживают 30 минут воздействия болгаркой или ломом злоумышленников, вы или охрана успеете среагировать<br><br> Класс устойчивости к взлому — Р3 и Р4, выдерживают удары тяжелым инструментом, вандалоустойчивы и защищают от взлома<br><br> <a href="#">Посмотреть сертификат</a></p>
-          <div class="btn"><a href="javascript:;" class="btn-red">Защитить окна или въезд дома</a></div>
+          <div class="btn"><a href="javascript:;" data-fancybox data-src="#popup-engineer" data-title="Защитите окна и въезд вашего дома" data-btn="Защитить окна или въезд дома" class="btn-red">Защитить окна или въезд дома</a></div>
         </div>
       </div>
     </div>
@@ -191,7 +253,7 @@
             <b>Декорируем  профили под дерево и камень</b>
             <p>Фактура рисунка "впаивается" в полимерно-порошковое покрытие на всю его толщину и таким образом не стирается в процессе эксплуатации даже в сложных условиях</p>
           </div>
-          <div class="btn"><a href="javascript:;" class="btn-red">Подобрать цвет и фактуру для моего заказа</a></div>
+          <div class="btn"><a href="javascript:;" data-fancybox data-src="#popup-engineer" data-title="Декорируйте рольставни или ворота под дизайн проект" data-btn="Подобрать цвет и фактуру для моего заказа" class="btn-red">Подобрать цвет и фактуру для моего заказа</a></div>
         </div>
       </div>
     </div>
@@ -287,7 +349,7 @@
           <label class="form-politic">
             <input type="checkbox" name="politic" checked/>
             <span></span>
-            <p>Вы соглашаетесь с условиями обработки<br> персональных данных (<a href="#">знакомиться</a>)</p>
+            <p>Вы соглашаетесь с условиями обработки<br> персональных данных (<a href="politic.html">ознакомиться</a>)</p>
           </label>
         </form>
       </div>
@@ -415,7 +477,7 @@
             <label class="form-politic">
               <input type="checkbox" name="politic" checked/>
               <span></span>
-              <p>Вы соглашаетесь с условиями обработки<br> персональных данных (<a href="#">знакомиться</a>)</p>
+              <p>Вы соглашаетесь с условиями обработки<br> персональных данных (<a href="politic.html">ознакомиться</a>)</p>
             </label>
           </form>
         </div>
@@ -428,7 +490,7 @@
     <div class="container">
       <h2 class="title"><b>Лидеры</b> рынка строительных услуг <b>уже продают</b> ворота и рольставни компании <b>«<span>Р</span>олМастер»</b></h2>
       <h4>Хотите стать дилером? Переходите на диллерскую страницу и узнайте, <b>как заработать до 200 тыс. руб.</b> в месяц на нашей продукции</h4>
-      <div class="btn"><a href="javascript:;" class="btn-red">Узнать как стать партнером</a></div>
+      <div class="btn"><a href="dealer.html" class="btn-red">Узнать как стать партнером</a></div>
       <img src="img/dealer-man.png" alt="" class="dealer-man">
     </div>
   </section>
@@ -535,14 +597,14 @@
     <div class="container">
       <div class="footer-logo">
         <img src="img/logo-white.svg" alt="">
-        <p>Производство, продажа и монтаж рольставней и автоматических ворот по России и СНГ с 1996 года<br><br>© Все права защищены 1996-2020</p>
+        <p>Производство, продажа и монтаж рольставней и автоматических ворот по России и СНГ с 1996 года<br><br>© Все права защищены 1996-2020<br><br><a href="politic.html">Политика конфиденциальности</a></p>
       </div>
       <ul class="footer-menu">
-        <li><a href="#">О компании</a></li>
+        <li><a href="/">О компании</a></li>
         <li><a href="#">Рольставни</a></li>
         <li><a href="#">Ворота</a></li>
-        <li><a href="#">Доставка, оплата, монтаж</a></li>
-        <li><a href="#">Стать дилером</a></li>
+        <li><a href="service.html">Доставка, оплата, монтаж</a></li>
+        <li><a href="dealer.html">Стать дилером</a></li>
         <li><a href="#">Техническая документация</a></li>
       </ul>
       <div class="footer-info">ООО «РолМастер»<br>ИНН 129590233215<br>ОГРН 429013549518<br><a href="#">Скачать реквизиты</a></div>

@@ -33,6 +33,8 @@ function scripts() {
 		'app/js/vendor/jquery.inputmask.min.js',
 		'app/js/vendor/jquery.validate.min.js',
 		'app/js/vendor/slick.min.js',
+		'node_modules/flatpickr/dist/flatpickr.min.js',
+		'node_modules/flatpickr/dist/l10n/ru.js',
 		'app/js/common.js',
 		])
 	.pipe(concat('app.min.js'))

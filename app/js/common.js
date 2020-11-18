@@ -32,21 +32,21 @@ $(document).ready(function(){
 	scroll();
 
 	// отступ для шапки
-	function topPromo(){
-		var top = $('.header').height(),
-				promo = $('.promo');
+	// function topPromo(){
+	// 	var top = $('.header').height(),
+	// 			promo = $('.promo');
 
-		promo.css('margin-top', top);
-	}
+	// 	promo.css('margin-top', top);
+	// }
+
+	// topPromo();
 
 	// добавление тени для шапки
 	$(window).scroll(function () {
 		if ($(this).scrollTop() > 0) {
-			$('.header').addClass('shadow fixed');
-			topPromo();
+			$('.header').addClass('shadow');
 		} else {
-			$('.header').removeClass('shadow fixed');
-			$('.promo').css('margin-top', '0px');
+			$('.header').removeClass('shadow');
 		}
 	});
 
@@ -87,6 +87,44 @@ $(document).ready(function(){
 		$('.documentation-tab').removeClass("active").hide();
 		$('.documentation-tab[data-tab=' + id + ']').addClass("active").fadeIn();
 
+	});
+
+	// всплывашки с вызовом инженера
+	$("[data-src='#popup-engineer']").fancybox({
+		touch: false,
+		autoFocus: false,
+	  beforeLoad: function(instance, slide) {
+	    var title = slide.opts.$orig.data('title');
+	    var btn = slide.opts.$orig.data('btn');
+	    $('#popup-engineer h3 b').html(title);
+	    $('#popup-engineer button').html(btn);
+	  }
+	});
+
+	var date = new Date(),
+			utcMoscow = new Date(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDate(), date.getUTCHours() + 3, date.getUTCMinutes()),
+			min_Time = '"' + utcMoscow.getHours() + ":" + utcMoscow.getMinutes() + '"',
+			min_Hour = utcMoscow.getHours(),
+			min_Minute = utcMoscow.getMinutes();
+
+	$(".datetimepicker").flatpickr({
+		locale: "ru",
+		enableTime: true,
+		minTime: min_Time,
+		defaultHour: min_Hour,
+		defaultMinute: min_Minute,
+		maxTime: "23:00",
+		dateFormat: "d.m.Y H:i",
+		minDate: "today"
+	});
+
+	$('.form-date').hide();
+
+	$('.js-open-date').click(function(){
+		$('.form-date').fadeIn();
+	});
+	$('.js-close-date').click(function(){
+		$('.form-date').fadeOut();
 	});
 
 });
