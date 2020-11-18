@@ -101,6 +101,7 @@ $(document).ready(function(){
 	  }
 	});
 
+	// выбор даты
 	var date = new Date(),
 			utcMoscow = new Date(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDate(), date.getUTCHours() + 3, date.getUTCMinutes()),
 			min_Time = '"' + utcMoscow.getHours() + ":" + utcMoscow.getMinutes() + '"',
@@ -126,5 +127,60 @@ $(document).ready(function(){
 	$('.js-close-date').click(function(){
 		$('.form-date').fadeOut();
 	});
+
+	// валидация форм
+	$('.js-form').submit(function () {
+		return false;
+	});
+	
+	$('.js-form').each(function () {
+		$(this).validate({
+			rules: {
+				name: {
+					required: true
+				},
+				phone: {
+					required: true
+				},
+				email: {
+					required: true
+				},
+				city: {
+					required: true
+				}
+			},
+			submitHandler: function (form) {
+				submitForm(form);
+			}
+		});
+	});
+	
+	function submitForm(form) {
+	
+		// var pdf = $(form.pdf).serialize(); 
+		var url = window.location.origin + '/php/send.php';
+	
+		$.ajax({
+			type: "POST",
+			url: url,
+			data: $(form).serialize()
+			// success: function (data) {
+			//   console.log('ok');
+			// }
+		});
+		$.fancybox.close();
+		$('.js-form input[name="name"], .js-form input[name="phone"], .js-form input[name="email"], .js-form input[name="date"], .js-form input[name="city"]').val('');
+
+		$.fancybox.open($("#thanks-popup"), { touch: false });
+	
+		// if(!pdf){
+		// 	$.fancybox.open($("#thanks-popup"), { touch: false });
+		// }else{
+		// 	$.fancybox.open($("#pdf-popup"), { touch: false });
+		// 	setTimeout('location="'+ decodeURIComponent(pdf.slice(4)) +'";', 3000);
+		// }
+	
+		return false;
+	}
 
 });

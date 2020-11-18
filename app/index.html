@@ -18,15 +18,15 @@
   <div class="popup" id="popup-engineer">
     <div class="form">
       <h3><b></b></h3>
-      <form>
+      <form method="post" class="js-form">
         <label class="form-label">
           <span>Наш инженер свяжется с вами в течение<br> 7 минут и предложит варианты </span>
         </label>
         <label class="form-label">
-          <input type="name" class="form-input" placeholder="Как к вам обращаться?" />
+          <input type="name" name="name" class="form-input" placeholder="Как к вам обращаться?" />
         </label>
         <label class="form-label">
-          <input type="tel" class="form-input masked" placeholder="Введите номер телефона" />
+          <input type="tel" name="phone" class="form-input masked" placeholder="Введите номер телефона" />
         </label>
         <div class="btn"><button class="btn-red"></button></div>
         <label class="form-politic">
@@ -47,11 +47,11 @@
         </label>
         <label class="form-label">
           <span>Менеджер свяжется с вами, чтобы уточнить удобное время для выезда замерщика к вам</span>
-          <input type="tel" class="form-input masked" placeholder="Введите номер телефона" />
+          <input type="tel" name="phone" class="form-input masked" placeholder="Введите номер телефона" />
         </label>
         <label class="form-label">
           <span>На почту мы отправим полезные материалы по подбору профиля и самые популярные варианты рольставней, которые выбирают 9 из 10 заказчиков</span>
-          <input type="email" class="form-input" placeholder="Введите e-mail адрес" />
+          <input type="email" name="email" class="form-input" placeholder="Введите e-mail адрес" />
         </label>
         <label class="form-label form-time">
           <span>Укажите удобное время для выезда замерщика</span>
@@ -221,7 +221,7 @@
         </div>
         <div class="voice-form">
           <b>Просто оставьте ваш телефон:</b>
-          <form>
+          <form method="post" class="js-form">
             <input type="tel" name="phone" placeholder="+7 (900) 000-00-00" class="input input-voice masked" />
             <button class="btn-red">Обсудить задачу с инженером<br> и получить скидку 5%</button>
           </form>
@@ -332,14 +332,14 @@
       </div>
       <div class="form ctaKP-form">
         <h3><b>Получите коммерческое<br> предложение</b> <i>по вашему</i><br> техническому заданию</h3>
-        <form>
+        <form method="post" class="js-form">
           <label class="form-label">
             <span>Менеджер свяжется с вами,<br> чтобы уточнить детали заказа</span>
-            <input type="tel" class="form-input masked" placeholder="Введите номер телефона" />
+            <input type="tel" name="phone" class="form-input masked" placeholder="Введите номер телефона" />
           </label>
           <label class="form-label">
             <span>На почту мы отправим коммерческое<br> предложение с ценами</span>
-            <input type="email" class="form-input" placeholder="Введите e-mail адрес" />
+            <input type="email" name="email" class="form-input" placeholder="Введите e-mail адрес" />
           </label>
           <label class="form-label">
             <span>Загрузите техническое задание (при наличии)</span>
@@ -463,15 +463,15 @@
       <div class="delivery-row">
         <div class="form delivery-form">
           <h3><b>Узнайте, кто сделает монтаж в&nbsp;вашем городе</b></h3>
-          <form>
+          <form method="post" class="js-form">
             <label class="form-label">
               <span>Заполните форму ниже, мы свяжемся<br> в&nbsp;ближайшее время и уточним компании<br> в&nbsp;вашем регионе</span>
             </label>
             <label class="form-label">
-              <input type="tel" class="form-input masked" placeholder="Введите номер телефона" />
+              <input type="tel" name="phone" class="form-input masked" placeholder="Введите номер телефона" />
             </label>
             <label class="form-label">
-              <input type="text" class="form-input" placeholder="Введите ваш город" />
+              <input type="text" name="city" class="form-input" placeholder="Введите ваш город" />
             </label>
             <div class="btn"><button class="btn-red">Получить список монтажных компаний</button></div>
             <label class="form-politic">
@@ -560,7 +560,7 @@
       </div>
       <div class="expert-form">
         <b>Чтобы обсудить задачу с экспертом, узнать стоимость и сроки производства оборудования, просто оставьте телефон:</b>
-        <form>
+        <form method="post" class="js-form">
           <input type="tel" name="phone" placeholder="+7 (900) 000-00-00" class="input input-voice masked" />
           <button class="btn-red">Обсудить задачу с экспертом</button>
         </form>
