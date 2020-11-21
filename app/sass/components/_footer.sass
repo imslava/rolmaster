@@ -48,3 +48,40 @@
       font-size: 18px
       font-weight: 700
       color: #ffffff
+
+// @include media(xl) // 1200
+
+@include media(lg) // 1024
+  .footer-menu
+    width: 100%
+    order: 1
+    @include flexbox
+    align-items: center
+    margin-top: 20px
+    li
+      margin-right: 15px
+  .footer-logo
+    width: 260px
+    order: -2
+
+@include media(md) // 768
+  .footer-info
+    order: 0
+    width: 50%
+    margin-top: 20px
+  .footer-contact
+    order: -1
+
+@include media(sm) // 576
+  .footer-logo,
+  .footer-contact
+    width: 100%
+  .footer-contact
+    text-align: left
+    margin-top: 20px
+
+@include media(xs) //475
+  .brand
+    padding: 40px 0 50px
+
+// @include media(xxs) // 375

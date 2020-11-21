@@ -32,3 +32,22 @@
       b
         font-weight: 700
         color: $color-red
+
+// @include media(xl) // 1200
+
+@include media(lg) // 1024
+  .control-item
+    width: calc(100% / 2 - 2px)
+    margin-top: 1px
+
+// @include media(md) // 768
+
+// @include media(sm) // 576
+
+@include media(xs) //475
+  .control
+    padding: 40px 0 50px
+  .control-item
+    width: calc(100% - 2px)
+
+// @include media(xxs) // 375

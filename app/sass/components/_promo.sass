@@ -60,3 +60,77 @@
       a
         color: $color-red
         border-bottom: 1px solid $color-red
+
+@include media(xl) // 1200
+  .promo-rollet
+    right: -25px
+
+@include media(lg) // 1024
+  .promo-list__item
+    width: calc(100% / 2 - 30px)
+    margin-top: 30px
+  .promo-list
+    margin-top: 70px
+  .promo-rating
+    right: 100px
+  .promo-rollet
+    width: 300px
+    top: -40px
+    right: -50px
+
+@include media(md) // 768
+  .promo h1
+    font-size: 36px
+    br
+      display: none
+  .promo-list__item
+    width: 100%
+    margin-top: 15px
+    padding: 20px
+  
+  .promo-rating
+    right: initial
+    top: initial
+    position: relative
+    margin-bottom: 40px
+  .promo h2
+    margin-bottom: 20px
+  .promo-rollet
+    top: 155px
+
+@include media(sm) // 576
+  .promo
+    padding: 70px 0 80px
+    h1
+      font-size: 30px
+  .promo-rollet
+    width: 240px
+    top: 125px
+
+@include media(xs) //475
+  .promo
+    margin-top: 122px
+    padding: 40px 0 50px
+    .btn-red
+      padding-left: 5px
+      padding-right: 5px
+      width: 100%
+  .btn-icon__promo
+    margin-right: 10px
+  
+  .promo h1
+    font-size: 24px
+  .promo-rollet
+    display: none
+  .promo-list
+    margin-top: 35px
+  .promo-list__item
+    padding: 10px
+  .promo-list__text
+    padding-left: 10px
+    font-size: 14px
+
+
+@include media(xxs) // 375
+  .promo
+    margin-top: 106px

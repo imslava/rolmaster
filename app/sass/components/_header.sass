@@ -92,3 +92,90 @@
           color: $color-black !important
           &:hover
             color: $color-red !important
+
+@include media(xl) // 1200
+  .header-mail, .header-phone, .header-logo
+    width: auto
+  .header-desc
+    max-width: 330px
+
+@include media(lg) // 1024
+  .header-mail, .header-phone
+    width: calc(100% / 3)
+  .header-mail, .header-phone, .header-btn
+    margin-top: 15px
+
+  .header-logo
+    width: 170px
+
+  .header-burger
+    width: 31px
+    height: 21px
+    margin-left: auto
+    background: url(../img/icons/burger.svg) no-repeat center center
+    cursor: pointer
+
+  .header-menu
+    position: absolute
+    width: calc(100% - 30px)
+    padding: 15px 0
+    border-top: 0
+    box-shadow: 0 40px 40px 0 rgba(0,0,0,.05)
+    display: none
+    &:before
+      content: ''
+      position: absolute
+      top: 0
+      left: -1000px
+      right: -1000px
+      bottom: 0
+      background: #ffffff
+      border-top: 1px solid $color-light-blue
+    li
+      margin-right: 0
+      width: 100%
+  .header-menu__drop
+    position: relative
+    display: block
+    top: 0
+    left: 0
+    box-shadow: none !important
+
+@include media(sm) // 576
+  .header-desc
+    display: none
+  .header-logo
+    order: -3
+  .header-mail
+    order: -2
+    margin: 0 auto
+  .header-burger
+    order: -1
+  .header-mail, .header-phone
+    width: auto
+  .header-phone
+    width: 150px
+
+@include media(xs) //475
+  .header-top
+    padding: 15px 0
+  .header-menu, .header-menu li a
+    padding: 10px 0
+  .header-menu__drop
+    padding: 0px 20px
+    width: 100%
+    li
+      margin-bottom: 0
+
+@include media(xxs) // 375
+  .header-mail
+    order: 1
+    margin: 0
+    margin-left: auto
+    margin-top: 15px
+  .header-phone
+    order: 0
+    margin: 0
+    margin-top: 15px
+  .header-btn
+    display: none

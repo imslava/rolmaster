@@ -73,3 +73,53 @@
       transition: .3s
     &:hover:after
       opacity: 1
+
+@include media(xl) // 1200
+  .certificates-item
+    height: 318px
+
+@include media(lg) // 1024
+  .certificates-tab
+    margin: 0 -5px
+  .certificates-item
+    margin: 10px 5px 0
+    width: calc(100% / 4 - 10px)
+    height: 256px
+
+@include media(md) // 768
+  .certificates-tabs li
+    width: calc(100% / 3)
+    &:nth-child(4), &:nth-child(5)
+      border-top: 1px solid #e7e7f1
+  .certificates-tabs
+    height: 148px
+  .certificates-item
+    height: 180px
+
+@include media(sm) // 576
+  .certificates-item
+    width: calc(100% / 2 - 10px)
+    height: 305px
+    &:nth-child(n+5)
+      display: none
+
+@include media(xs) //475
+  .certificates
+    padding: 40px 0 50px
+    h4
+      font-size: 18px
+  .certificates-item
+    height: 235px
+
+@include media(xxs) // 375
+  .certificates-tabs li
+    width: calc(100% / 2)
+  .certificates-tabs
+    height: 212px
+    li
+      &:nth-child(5)
+        border: 0
+      &:nth-child(6)
+        border-top: 1px solid #e7e7f1
+  .certificates-item
+    height: 198px

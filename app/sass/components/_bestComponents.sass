@@ -47,3 +47,37 @@
       border-radius: 15px
       background: $color-red
       z-index: -1
+
+@include media(xl) // 1200
+  .bestComponents-item:before
+    background-size: 226px
+
+@include media(lg) // 1024
+  .bestComponents-item
+    padding: 10px 15px
+  .bestComponents-item:before
+    background-size: 162px
+
+@include media(md) // 768
+  .bestComponents-item
+    width: calc(100% / 2 - 30px)
+  .bestComponents-item:before
+    background-size: 258px
+
+@include media(sm) // 576
+  .bestComponents-item:before
+    background-size: 208px
+
+@include media(xs) //475
+  .bestComponents
+    padding: 40px 0 50px
+  .bestComponents-item
+    width: 260px
+    padding: 10px 30px 20px
+  .bestComponents-item:before
+    background-size: 260px
+  .bestComponents-row
+    margin-top: 0
+    justify-content: center
+
+// @include media(xxs) // 375

@@ -47,3 +47,56 @@
       b
         display: block
         margin-bottom: 22px
+
+@include media(xl) // 1200
+  .colors300-badge
+    left: 250px
+
+@include media(lg) // 1024
+  .colors300-image,
+  .colors300-text
+    width: 100%
+  
+  .colors300-text__decor
+    max-width: 100%
+  
+  .colors300-doors
+    margin: 0 auto
+  .colors300-badge
+    left: 425px
+  
+  .colors300-image__text
+    margin: 0 auto
+  
+  .colors300 .btn-red
+    margin: 0 auto
+
+@include media(md) // 768
+  .colors300-badge
+    left: 325px
+
+@include media(sm) // 576
+  .colors300-badge
+    left: 275px
+  .colors300-image__text
+    margin-left: 0
+  
+  .colors300-text__decor
+    margin-bottom: 30px
+
+@include media(xs) //475
+  .colors300
+    padding: 40px 0 50px
+  
+  .colors300-badge
+    left: 200px
+    width: 150px
+    margin-top: -115px
+
+@include media(xxs) // 375
+  .colors300-text__profil p
+    width: 100%
+    padding-left: 0
+    padding-top: 15px
+  .colors300-badge
+    left: 135px

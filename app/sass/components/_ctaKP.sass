@@ -72,3 +72,41 @@
       margin-right: 0
   &-form
     margin-left: auto
+
+@include media(xl) // 1200
+  .ctaKP-text
+    width: 550px
+
+@include media(lg) // 1024
+  .ctaKP-text
+    width: 100%
+  
+  .ctaKP-form
+    margin: 40px auto 0
+
+// @include media(md) // 768
+
+@include media(sm) // 576
+  .ctaKP-list
+    padding-left: 25px
+    margin-top: 30px
+  .ctaKP-row
+    margin-left: 0px
+
+@include media(xs) //475
+  .ctaKP
+    padding: 70px 0 50px
+  
+  .ctaKP-item
+    margin-right: 0
+    width: 100%
+    padding-left: 0
+    text-align: center
+    margin-top: 20px
+  .ctaKP-item img
+    right: 0
+    margin: 0 auto
+  .ctaKP-row
+    margin-top: 0
+
+// @include media(xxs) // 375

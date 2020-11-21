@@ -1,5 +1,6 @@
 .delivery
   padding: 70px 0 80px
+  overflow: hidden
   h4
     text-align: center
     font-size: 20px
@@ -13,3 +14,37 @@
     top: 80px
     right: -55px
     z-index: -1
+
+@include media(xl) // 1200
+  .delivery-car
+    right: -230px
+
+@include media(lg) // 1024
+  .delivery-car
+    width: 500px
+    right: -150px
+    top: 285px
+
+// @include media(md) // 768
+
+// @include media(sm) // 576
+
+@include media(xs) //475
+  .delivery
+    padding: 40px 0 50px
+    .title br
+      display: none
+  
+  .delivery h4
+    font-size: 18px
+  .delivery-row
+    margin-top: 30px
+  .delivery-car
+    position: relative
+    right: 0
+    left: 0
+    top: 0
+    width: 100%
+    margin-top: 30px
+
+// @include media(xxs) // 375

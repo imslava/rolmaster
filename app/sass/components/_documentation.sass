@@ -52,6 +52,7 @@
         color: $color-black
         padding-left: 35px
         transition: .3s
+        display: block
         &:before
           content: ''
           position: absolute
@@ -62,3 +63,27 @@
           background: url(../img/icons/documentation.svg) no-repeat
         &:hover
           color: $color-red
+
+// @include media(xl) // 1200
+
+// @include media(lg) // 1024
+
+// @include media(md) // 768
+
+// @include media(sm) // 576
+
+@include media(xs) //475
+  .documentation
+    padding: 0
+  
+  .documentation-tabs li
+    width: calc(100% / 2)
+  .documentation-tabs
+    height: 148px
+    li
+      &:nth-child(4)
+        border-top: 1px solid #e7e7f1
+  .documentation-list
+    width: calc(100% - 30px)
+    margin-top: 0
+// @include media(xxs) // 375

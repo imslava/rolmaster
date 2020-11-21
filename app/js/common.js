@@ -52,7 +52,7 @@ $(document).ready(function(){
 
 	// карусель работ
 	$(".portfolio-carousel__content").slick({
-		arrows: false,
+		arrows: true,
 		fade: true,
 		infinite: true,
 		dots: true,
@@ -175,6 +175,7 @@ $(document).ready(function(){
 		return false;
 	}
 
+	// загрузка файла
 	$(function() {
 		var btnTitle = $(".form-file p").html();
 		var btnTitleHtml = $.parseHTML(btnTitle);
@@ -183,7 +184,6 @@ $(document).ready(function(){
 			 if( this.files && this.files.length >= 1 ) {
 					var file = this.files[0];
 						 var reader = new FileReader();
-						 // Set preview image into the popover data-content
 						 reader.onload = function (e) {
 								$(".form-file p").text(file.name).addClass('upload');
 						 }
@@ -194,6 +194,11 @@ $(document).ready(function(){
 			 }
 				 
 		 });   
- });
+	});
+	
+	// меню мобильное
+	$('.header-burger').click(function(){
+		$('.header-menu').fadeToggle(300);
+	});
 
 });

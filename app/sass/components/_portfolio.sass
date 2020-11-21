@@ -74,3 +74,67 @@
       background-position: center center
       position: relative
       height: 100%
+  .slick-arrow
+    display: none
+
+// @include media(xl) // 1200
+
+@include media(lg) // 1024
+  .portfolio .title br
+    display: none
+  
+  .portfolio-carousel__text
+    max-width: 328px
+
+@include media(md) // 768
+  .portfolio
+    padding: 70px 0 80px
+  .portfolio-carousel__list
+    display: none
+  .portfolio-carousel__content
+    width: 100%
+    height: 400px
+    border-radius: 15px
+  .portfolio-carousel__text
+    max-width: 486px
+  .portfolio 
+    .slick-arrow
+      display: block
+      position: absolute
+      bottom: -80px
+      z-index: 100
+      width: 60px
+      height: 60px
+      border-radius: 100%
+      border: 0
+      font-size: 0
+    .slick-prev
+      left: calc(100% / 2 - 70px)
+      transform: rotate(180deg)
+      background: url(../img/icons/portfolio-arrow.svg) no-repeat left 26px center, linear-gradient(0deg, rgba(255, 0, 0, 0.47) 0%, rgba(255, 0, 0, 0.94) 100%), #fff
+    .slick-next
+      right: calc(100% / 2 - 70px)
+      background: url(../img/icons/portfolio-arrow.svg) no-repeat left 26px center, linear-gradient(180deg, rgba(255, 0, 0, 0.47) 0%, rgba(255, 0, 0, 0.94) 100%), #fff
+  .portfolio-carousel__content
+    overflow: initial
+  .portfolio-carousel__content .slick-list
+    border-radius: 15px
+
+@include media(sm) // 576
+  .portfolio-carousel
+    margin-top: 30px
+  .portfolio-carousel__text
+    max-width: 385px
+
+@include media(xs) //475
+  .portfolio
+    padding: 40px 0 50px
+  .portfolio-carousel__text
+    max-width: 100%
+    left: 10px
+    bottom: 10px
+    right: 10px
+    padding: 10px
+    font-size: 14px
+
+// @include media(xxs) // 375

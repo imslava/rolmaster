@@ -13,9 +13,27 @@
 @include media(sm) // 576
   .container
     max-width: 475px
+  
+  .title
+    font-size: 26px
 
 @include media(xs) //475
   .container
     max-width: 100%
+  
+  .form
+    width: 100%
+  .form-politic p
+    width: 220px
+    br
+      display: none
 
-// @include media(xxs) // 375
+@include media(xxs) // 375
+  .title 
+    font-size: 22px
+
+  .form
+    padding: 20px
+  .form h3
+    font-size: 20px
+    margin-bottom: 20px

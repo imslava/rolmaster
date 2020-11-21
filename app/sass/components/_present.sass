@@ -85,3 +85,39 @@
           font-size: 20px
       &:nth-child(2) img
         left: -13px
+
+// @include media(xl) // 1200
+
+// @include media(lg) // 1024
+
+@include media(md) // 768
+  .present-text, .present-video
+    width: calc(100% - 30px)
+  .present-video
+    order: 1
+    margin-top: 40px
+  .present-video__block
+    max-width: 100%
+
+// @include media(sm) // 576
+
+@include media(xs) //475
+  .present
+    padding: 40px 0 50px
+  .present-video__block
+    height: 260px
+
+@include media(xxs) // 375
+  .present-list li span
+    padding-left: 0
+    text-align: center
+  .present-list li img
+    position: relative
+    margin: 0 auto 20px
+  .present-video__block
+    height: 200px
+  .present-video__tap
+    margin-left: 50px
+    margin-top: 25px
+  .present-video__block:after
+    left: 50px
