@@ -1,0 +1,38 @@
+.make
+  padding-top: 80px
+  .title
+    margin: 0 auto
+    max-width: 1040px
+  h4
+    font-size: 20px
+    text-align: center
+    font-weight: 400
+    margin: 20px auto 60px
+    max-width: 940px
+  &-row
+    @include flexbox
+    margin: 0 -15px
+  &-item
+    width: calc(100% / 3 - 30px)
+    margin: 0 15px
+    &__img
+      width: 100%
+      height: 180px
+      border-radius: 8px
+      background-repeat: no-repeat
+      background-position: center center
+      background-size: cover
+      background-color: #eee
+      &-1
+        background-image: url(../img/make/item-1.jpg)
+      &-2
+        background-image: url(../img/make/item-2.jpg)
+      &-3
+        background-image: url(../img/make/item-3.jpg)
+    p
+      padding: 20px 10px
+      a
+        color: $color-red
+        border-bottom: 1px solid $color-red
+    &:nth-child(3) p
+      padding-right: 0

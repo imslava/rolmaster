@@ -1,5 +1,12 @@
 .portfolio
   padding-top: 70px
+  &.commercial
+    padding-top: 0 !important
+    .portfolio-btns
+      @include flexbox
+      margin-top: 50px
+      align-items: center
+      justify-content: space-between
   .title
     margin: 0 auto
     max-width: 1040px
@@ -75,6 +82,8 @@
       position: relative
       height: 100%
   .slick-arrow
+    display: none !important
+  &-btns
     display: none
 
 // @include media(xl) // 1200
@@ -99,7 +108,7 @@
     max-width: 486px
   .portfolio 
     .slick-arrow
-      display: block
+      display: block !important
       position: absolute
       bottom: -80px
       z-index: 100

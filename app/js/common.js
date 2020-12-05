@@ -201,4 +201,17 @@ $(document).ready(function(){
 		$('.header-menu').fadeToggle(300);
 	});
 
+	// соберем заказ
+	$(".order-tabs li").click(function (){
+	  var $this = $(this),
+	      id    = $this.data("tab");	
+
+	  $(".order-tabs li").removeClass("active");
+		$(".order-tabs li[data-tab=" + id + "]").addClass("active");
+
+		$('.order-tab').removeClass("active").hide();
+		$('.order-tab[data-tab=' + id + ']').addClass("active").fadeIn();
+
+	});
+
 });

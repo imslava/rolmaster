@@ -1,4 +1,4 @@
-<section class="portfolio">
+<section class="portfolio @class">
   <div class="container">
     <h2 class="title">За 24 года работы мы выиграли 26 федеральных тендера, произвели и <b>установили более 25 000 @type</b><br> <i>для частных и корпоративных заказчиков</i></h2>
     <div class="portfolio-carousel">
@@ -30,5 +30,32 @@
         </div>
       </div>
     </div>
+    <div class="portfolio-btns">
+      <div class="btn"><a href="javascript:;" data-fancybox data-src="#popup-portfolio" class="btn-gray">Хотите увидеть больше работ?</a></div>
+      <div class="btn"><a href="javascript:;" data-fancybox data-src="#popup-measurer" class="btn-red">Вызвать замерщика на объект бесплатно</a></div>
+    </div>
   </div>
 </section>
+
+<div class="popup" id="popup-portfolio">
+  <div class="form">
+    <h3><b>Хотите увидеть больше работ?</b></h3>
+    <form method="post" class="js-form">
+      <label class="form-label">
+        <span>Мы готовы показывать свои работы, партнерам. Вышлем работы на почту</span>
+      </label>
+      <label class="form-label">
+        <input type="tel" name="phone" class="form-input masked" placeholder="Введите номер телефона" />
+      </label>
+      <label class="form-label">
+        <input type="email" name="email" class="form-input" placeholder="Введите почту" />
+      </label>
+      <div class="btn"><button class="btn-red">Посмотреть больше работ</button></div>
+      <label class="form-politic">
+        <input type="checkbox" name="politic" checked/>
+        <span></span>
+        <p>Вы соглашаетесь с условиями обработки<br> персональных данных (<a href="politic.html">ознакомиться</a>)</p>
+      </label>
+    </form>
+  </div>
+</div>
