@@ -15,107 +15,19 @@
   </head>
 <body>
 
-  <div class="popup" id="popup-engineer">
-    <div class="form">
-      <h3><b></b></h3>
-      <form method="post" class="js-form">
-        <label class="form-label">
-          <span>Наш инженер свяжется с вами в течение<br> 7 минут и предложит варианты </span>
-        </label>
-        <label class="form-label">
-          <input type="name" name="name" class="form-input" placeholder="Как к вам обращаться?" />
-        </label>
-        <label class="form-label">
-          <input type="tel" name="phone" class="form-input masked" placeholder="Введите номер телефона" />
-        </label>
-        <div class="btn"><button class="btn-red"></button></div>
-        <label class="form-politic">
-          <input type="checkbox" name="politic" checked/>
-          <span></span>
-          <p>Вы соглашаетесь с условиями обработки<br> персональных данных (<a href="politic.html">ознакомиться</a>)</p>
-        </label>
-      </form>
-    </div>
-  </div>
-
-  <div class="popup" id="popup-measurer">
-    <div class="form">
-      <h3 style="font-size: 20px"><b>Пригласите замерщика бесплатно</b></h3>
-      <form>
-        <label class="form-label">
-          <span style="color: #1A1A1A">Специалист приедет, чтобы провести все замеры<br> и подберёт для вас оптимальный вариант,<br> который прослужит десятки лет</span>
-        </label>
-        <label class="form-label">
-          <span>Менеджер свяжется с вами, чтобы уточнить удобное время для выезда замерщика к вам</span>
-          <input type="tel" name="phone" class="form-input masked" placeholder="Введите номер телефона" />
-        </label>
-        <label class="form-label">
-          <span>На почту мы отправим полезные материалы по подбору профиля и самые популярные варианты рольставней, которые выбирают 9 из 10 заказчиков</span>
-          <input type="email" name="email" class="form-input" placeholder="Введите e-mail адрес" />
-        </label>
-        <label class="form-label form-time">
-          <span>Укажите удобное время для выезда замерщика</span>
-          <label class="js-close-date">
-            <input type="radio" name="time" checked />
-            <p>Как можно быстрее</p>
-          </label>
-          <label class="js-open-date">
-            <input type="radio" name="time" />
-            <p>В конкретное время</p>
-          </label>
-        </label>
-        <label class="form-label form-date">
-          <input type="hidden" class="form-input" data-toggle="datepicker" name="date" placeholder="Выберите дату для замера" />
-          <div class="form-calendar"></div>
-        </label>
-        <div class="btn"><button class="btn-red">Записаться на бесплатный замер</button></div>
-        <label class="form-politic">
-          <input type="checkbox" name="politic" checked/>
-          <span></span>
-          <p>Вы соглашаетесь с условиями обработки<br> персональных данных (<a href="politic.html">ознакомиться</a>)</p>
-        </label>
-      </form>
-    </div>
-  </div>
-  
-  <header class="header fixed">
-    <div class="container">
-      <div class="header-top">
-        <a class="header-logo" href="/"><img src="img/logo.svg" alt=""></a>
-        <p class="header-desc">Производство, продажа и монтаж рольставней и автоматических ворот по России и СНГ с 1996 года</p>
-        <div class="header-burger"></div>
-        <div class="header-mail">
-          <p>Присылайте ТЗ на</p>
-          <a href="mailto:info@rolmaster.ru">info@rolmaster.ru</a>
-        </div>
-        <div class="header-phone">
-          <p>ПН-ПТ: 9:00-18:00</p>
-          <a href="tel:88007707560">8 (800) 770-75-60</a>
-        </div>
-        <a href="javascript:;" data-fancybox data-src="#popup-engineer" data-title="Получите консультацию по телефону" data-btn="Перезвоните мне" class="header-btn">Перезвоните мне</a>
-      </div>
-      <ul class="header-menu">
-        <li class="active"><a href="/">О компании</a></li>
-        <li>
-          <a href="javascript:;">Рольставни <img src="img/icons/dropdown.svg" alt=""></a>
-          <ul class="header-menu__drop">
-            <li><a href="commercial-roller.html">Коммерческие рольставни</a></li>
-            <li><a href="private-roller.html">Частные рольставни</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="javascript:;">Ворота <img src="img/icons/dropdown.svg" alt=""></a>
-          <ul class="header-menu__drop">
-            <li><a href="commercial-gate.html">Коммерческие ворота</a></li>
-            <li><a href="private-gate.html">Частные ворота</a></li>
-          </ul>
-        </li>
-        <li><a href="service.html">Оплата, доставка, монтаж</a></li>
-        <li class="header-menu__right"><a href="calculator.html">Расчёт за 29 минут</a></li>
-        <li><a href="javascript:;" data-fancybox data-src="#popup-measurer">Вызвать замерщика</a></li>
-      </ul>
-    </div>
-  </header>
+  @include('components/_popup.html')
+  @include('components/_header.html', {
+    "link1": "active",
+    "link2": "",
+      "link2-1": "",
+      "link2-2": "",
+    "link3": "",
+      "link3-1": "",
+      "link3-2": "",
+    "link4": "",
+    "link5": "",
+    "link6": ""
+  })  
 
   <section class="promo">
     <div class="container">
@@ -145,66 +57,21 @@
     </div>
   </section>
 
-  <section class="brand">
-    <div class="container">
-      <h2 class="title">К нам обращаются когда <i>нужны нестандартные решения</i><br> <b>с высокими требованиями:</b></h2>
-      <div class="brand-row">
-        <img src="img/brands/1.jpg" alt="">
-        <img src="img/brands/2.jpg" alt="">
-        <img src="img/brands/3.jpg" alt="">
-        <img src="img/brands/4.jpg" alt="">
-        <img src="img/brands/5.jpg" alt="">
-        <div class="w-100"></div>
-        <img src="img/brands/6.jpg" alt="">
-        <img src="img/brands/7.jpg" alt="">
-        <img src="img/brands/8.jpg" alt="">
-        <img src="img/brands/9.jpg" alt="">
-        <img src="img/brands/10.jpg" alt="">
-        <div class="w-100"></div>
-        <img src="img/brands/11.jpg" alt="">
-        <img src="img/brands/12.jpg" alt="">
-        <img src="img/brands/13.jpg" alt="">
-        <img src="img/brands/14.jpg" alt="">
-      </div>
-    </div>
-  </section>
+  @include('components/_brand.html')
 
   <section class="service">
     <div class="container">
       <h2 class="title"><b>Производим, доставляем и устанавливаем:</b><br> от ворот для домов – <i>до 14-метровых<br> рольставен для производств</i></h2>
-      <div class="service-item">
-        <div class="service-item__img service-item__img-1"><h4>..когда нужно обезопасить от огня и погодных условий доступы на объект</h4></div>
-        <div class="service-item__text">
-          <h3>Производим профили, которые выдерживают перепады температур от -30°С до +50°С и задерживают злоумышленников</h3>
-          <p>Профили Ролмастер <b>выдерживают экстремальные температуры и погодные условия</b>, даже на Камчатке.<br><br> <a href="#">Посмотреть документы испытаний</a></p>
-          <p>Высокая пожаростойчивость подтверждена сертификатами КО45 и сертификат санитарных норм - для объектов общепита и т.д.<br><br> <a href="#">Посмотреть сертификат</a></p>
-          <div class="btn"><a href="javascript:;" data-fancybox data-src="#popup-engineer" data-title="Повысьте безопасность вашего объекта" data-btn="Повысить безопасность объекта" class="btn-red">Повысить безопасность объекта</a></div>
-        </div>
-      </div>
-      <div class="service-item">
-        <div class="service-item__img service-item__img-2"><h4>..когда нужно сделать  входные группы для павильонов и офисов в ТЦ или БЦ или предприятий общественного питания</h4></div>
-        <div class="service-item__text">
-          <h3>Как сделать надежную и элегантную защиту для вашей компании?</h3>
-          <p>Наша продукция разрешена для использования на предприятиях общественного питания. Мы имеем богатый опыт работы с ролставнями для торговых центров <b>под разные бюджеты и с учетом специфики.</b><br><br> Нашей продукцией пользуются для своих предприятий такие бренды как:<br><br> — Бургер Кинг<br> — Перекресток<br> — Газпромбанк<br> и другие<br><br> <a href="#">Посмотреть отзывы этих компаний</a></p>
-          <div class="btn"><a href="javascript:;" data-fancybox data-src="#popup-engineer" data-title="Соответствуйте требованиям вашей организации" data-btn="Соответствовать требованиям" class="btn-red">Соответствовать требованиям</a></div>
-        </div>
-      </div>
-      <div class="service-item">
-        <div class="service-item__img service-item__img-3"><h4>..когда нужно сделать брендированные или декорированные рольставни или ворота</h4></div>
-        <div class="service-item__text">
-          <h3>Как сделать чтобы рольставни или ворота идеально вписывались в дизайн-проект или брендбук?</h3>
-          <p>Выкрасим профили в любой из 300 цветовых решений  для вашего дизайн-проекта<br><br> Нанесём фактуру с имитацией под дерево или камень<br><br> Фактура и цвета изделий имеют высокую устойчивость к влиянию солнца, влаги, механическим воздействиям. Однородность цвета и фактуры сохраняется более 5 лет</p>
-          <div class="btn"><a href="javascript:;" data-fancybox data-src="#popup-engineer" data-title="Декорируйте рольставни или ворота под дизайн проект" data-btn="Декорировать ворота или рольставни" class="btn-red">Декорировать ворота или рольставни</a></div>
-        </div>
-      </div>
-      <div class="service-item">
-        <div class="service-item__img service-item__img-4"><h4>..когда нужно защитить от злоумышленников и вандалов окна и въезд частного дома или квартиры</h4></div>
-        <div class="service-item__text">
-          <h3>Как быть спокойным за свое имещество когда дома никого нет?</h3>
-          <p>Стальные рольставни и ворота выдерживают 30 минут воздействия болгаркой или ломом злоумышленников, вы или охрана успеете среагировать<br><br> Класс устойчивости к взлому — Р3 и Р4, выдерживают удары тяжелым инструментом, вандалоустойчивы и защищают от взлома<br><br> <a href="#">Посмотреть сертификат</a></p>
-          <div class="btn"><a href="javascript:;" data-fancybox data-src="#popup-engineer" data-title="Защитите окна и въезд вашего дома" data-btn="Защитить окна или въезд дома" class="btn-red">Защитить окна или въезд дома</a></div>
-        </div>
-      </div>
+      @loop('components/_service-item.html', [
+        { "id": 1,
+          "titleImg": "..когда нужно обезопасить от огня и погодных условий доступы на объект", "title": "Производим профили, которые выдерживают перепады температур от -30°С до +50°С и задерживают злоумышленников", "text": "<p>Профили Ролмастер <b>выдерживают экстремальные температуры и погодные условия</b>, даже на Камчатке.<br><br> <a href='#'>Посмотреть документы испытаний</a></p><p>Высокая пожаростойчивость подтверждена сертификатами КО45 и сертификат санитарных норм - для объектов общепита и т.д.<br><br> <a href='#'>Посмотреть сертификат</a></p>", "titlePopup": "Повысьте безопасность вашего объекта", "btn": "Повысить безопасность объекта" },
+        { "id": 2,
+          "titleImg": "..когда нужно сделать входные группы для павильонов и офисов в ТЦ или БЦ или предприятий общественного питания", "title": "Как сделать надежную и элегантную защиту для вашей компании?", "text": "<p>Наша продукция разрешена для использования на предприятиях общественного питания. Мы имеем богатый опыт работы с ролставнями для торговых центров <b>под разные бюджеты и с учетом специфики.</b><br><br> Нашей продукцией пользуются для своих предприятий такие бренды как:<br><br> — Бургер Кинг<br> — Перекресток<br> — Газпромбанк<br> и другие<br><br> <a href='#'>Посмотреть отзывы этих компаний</a></p>", "titlePopup": "Соответствуйте требованиям вашей организации", "btn": "Соответствовать требованиям" },
+        { "id": 3,
+          "titleImg": "..когда нужно сделать брендированные или декорированные рольставни или ворота", "title": "Как сделать чтобы рольставни или ворота идеально вписывались в дизайн-проект или брендбук?", "text": "<p>Выкрасим профили в любой из 300 цветовых решений  для вашего дизайн-проекта<br><br> Нанесём фактуру с имитацией под дерево или камень<br><br> Фактура и цвета изделий имеют высокую устойчивость к влиянию солнца, влаги, механическим воздействиям. Однородность цвета и фактуры сохраняется более 5 лет</p>", "titlePopup": "Декорируйте рольставни или ворота под дизайн проект", "btn": "Декорировать ворота или рольставни" },
+        { "id": 4,
+          "titleImg": "..когда нужно защитить от злоумышленников и вандалов окна и въезд частного дома или квартиры", "title": "Как быть спокойным за свое имещество когда дома никого нет?", "text": "<p>Стальные рольставни и ворота выдерживают 30 минут воздействия болгаркой или ломом злоумышленников, вы или охрана успеете среагировать<br><br> Класс устойчивости к взлому — Р3 и Р4, выдерживают удары тяжелым инструментом, вандалоустойчивы и защищают от взлома<br><br> <a href='#'>Посмотреть сертификат</a></p>", "titlePopup": "Защитите окна и въезд вашего дома", "btn": "Защитить окна или въезд дома" }
+      ])
     </div>
   </section>
 
@@ -237,29 +104,7 @@
     </div>
   </section>
 
-  <section class="colors300">
-    <div class="container">
-      <h2 class="title"><i>300+</i> цветовых решений дают <b>возможность подобрать цвет и фактуру под любой дизайн-проект</b></h2>
-      <div class="colors300-row">
-        <div class="colors300-image">
-          <img src="img/colors300-doors.jpg" alt="" class="colors300-doors">
-          <img src="img/icons/colors300-badge.svg" alt="" class="colors300-badge">
-          <div class="colors300-image__text">Имитация мрамора, малахита, любой породы дерева <b>и еще 104 варианта</b></div>
-        </div>
-        <div class="colors300-text">
-          <div class="colors300-text__profil">
-            <img src="img/colors300-profil.jpg" alt="">
-            <p><b>Выкрашиваем профили</b> по цветовой гамме RAL порошковым методом, что обеспечивает покрытию наших изделий прочность, долговечность, защиту от коррозии и экологическую безупречность</p>
-          </div>
-          <div class="colors300-text__decor">
-            <b>Декорируем  профили под дерево и камень</b>
-            <p>Фактура рисунка "впаивается" в полимерно-порошковое покрытие на всю его толщину и таким образом не стирается в процессе эксплуатации даже в сложных условиях</p>
-          </div>
-          <div class="btn"><a href="javascript:;" data-fancybox data-src="#popup-engineer" data-title="Декорируйте рольставни или ворота под дизайн проект" data-btn="Подобрать цвет и фактуру для моего заказа" class="btn-red">Подобрать цвет и фактуру для моего заказа</a></div>
-        </div>
-      </div>
-    </div>
-  </section>
+  @include('components/_colors300.html')
 
   <section class="bestComponents">
     <div class="container">
@@ -273,221 +118,13 @@
     </div>
   </section>
 
-  <section class="portfolio">
-    <div class="container">
-      <h2 class="title">За 24 года работы мы выиграли 26 федеральных тендера, произвели и <b>установили более 25 000 продукции</b><br> <i>для частных и корпоративных заказчиков</i></h2>
-      <div class="portfolio-carousel">
-        <div class="portfolio-carousel__list"></div>
-        <div class="portfolio-carousel__content">
-          <div class="portfolio-carousel__item" style="background-image: url(img/portfolio/item-1.jpg);" data-title="ЦУМ<br> Перфорированные рольставни">
-            <div class="portfolio-carousel__text">В сжатые сроки были изготовлены и установлены на 2-х этажах универмага, свыше 70-и роллетных конструкций из стальных профилей</div>
-          </div>
-          <div class="portfolio-carousel__item" style="background-image: url(img/portfolio/item-1.jpg);" data-title="ТЦ «МЕГА Белая Дача»<br> Роллетные системы">
-            <div class="portfolio-carousel__text">2</div>
-          </div>
-          <div class="portfolio-carousel__item" style="background-image: url(img/portfolio/item-1.jpg);" data-title="«Оранжевое Небо» Детский универмаг Наро-Фоминск. Входные группы">
-            <div class="portfolio-carousel__text">3</div>
-          </div>
-          <div class="portfolio-carousel__item" style="background-image: url(img/portfolio/item-1.jpg);" data-title="Торговый Центр, Котельники МО<br> Перфорированные рольставни">
-            <div class="portfolio-carousel__text">4</div>
-          </div>
-          <div class="portfolio-carousel__item" style="background-image: url(img/portfolio/item-1.jpg);" data-title="ЦУМ<br> Перфорированные рольставни">
-            <div class="portfolio-carousel__text">5</div>
-          </div>
-          <div class="portfolio-carousel__item" style="background-image: url(img/portfolio/item-1.jpg);" data-title="ТЦ «МЕГА Белая Дача»<br> Роллетные системы">
-            <div class="portfolio-carousel__text">6</div>
-          </div>
-          <div class="portfolio-carousel__item" style="background-image: url(img/portfolio/item-1.jpg);" data-title="«Оранжевое Небо» Детский универмаг Наро-Фоминск. Входные группы">
-            <div class="portfolio-carousel__text">7</div>
-          </div>
-          <div class="portfolio-carousel__item" style="background-image: url(img/portfolio/item-1.jpg);" data-title="Торговый Центр, Котельники МО<br> Перфорированные рольставни">
-            <div class="portfolio-carousel__text">8</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  @include('components/_portfolio.html', { "type": "продукции" })
 
-  <section class="ctaKP">
-    <div class="container">
-      <div class="ctaKP-text">
-        <h2 class="title"><b>Рассчитаем за 29 минут точную стоимость и&nbsp;сроки производства</b> <i>по&nbsp;готовому ТЗ</i> или поможем в его разработке</h2>
-        <div class="ctaKP-list">
-          <p>Сервис-инженер компании свяжется с вами для того, чтобы: </p>
-          <ul>
-            <li>Помочь определиться с типом профиля и вариантами монтажа;</li>
-            <li>Подобрать комплектующие (тип профиля, система запирания и управления и т. д.);</li>
-            <li>Рассказать про возможности персонализации и декорирования изделия под ваш бренд;</li>
-            <li>Подготовит коммерческое предложение и вышлет его вам в течении 29 минут. </li>
-          </ul>
-        </div>
-        <div class="ctaKP-row">
-          <div class="ctaKP-item">
-            <img src="img/ctakp-item-1.png" alt="">
-            <p>Скидка 5% на заказ<br> при заказе в тот же день</p>
-          </div>
-          <div class="ctaKP-item">
-            <img src="img/ctakp-item-2.png" alt="">
-            <p>КП с точной стоимостью<br> и сроками работ</p>
-          </div>
-        </div>
-      </div>
-      <div class="form ctaKP-form">
-        <h3><b>Получите коммерческое<br> предложение</b> <i>по вашему</i><br> техническому заданию</h3>
-        <form method="post" class="js-form">
-          <label class="form-label">
-            <span>Менеджер свяжется с вами,<br> чтобы уточнить детали заказа</span>
-            <input type="tel" name="phone" class="form-input masked" placeholder="Введите номер телефона" />
-          </label>
-          <label class="form-label">
-            <span>На почту мы отправим коммерческое<br> предложение с ценами</span>
-            <input type="email" name="email" class="form-input" placeholder="Введите e-mail адрес" />
-          </label>
-          <label class="form-label form-file">
-            <span>Загрузите техническое задание (при наличии)</span>
-            <input type="file" name="file">
-            <p>Загрузить техническое задание</p>
-          </label>
-          <div class="btn"><button class="btn-red">Получить предложение за 29 минут</button></div>
-          <label class="form-politic">
-            <input type="checkbox" name="politic" checked/>
-            <span></span>
-            <p>Вы соглашаетесь с условиями обработки<br> персональных данных (<a href="politic.html">ознакомиться</a>)</p>
-          </label>
-        </form>
-      </div>
-    </div>
-  </section>
-
-  <section class="control">
-    <div class="container">
-      <h2 class="title"><b>Мы контролируем все:</b> подбор материалов и комплектующих, работу сотрудников, а также качество каждого этапа изготовления, <i>чтобы получить лучшие на рынке рольставни и ворота</i></h2>
-      <div class="control-row">
-        <div class="control-item">
-          <h3>#01</h3>
-          <p>В производстве используем <b>четыре группы стальных профилей</b> производства НЛМК и Северстали, на любые проемы, от оконных (0,5м²) до ангаров (до 14 метров)</p>
-        </div>
-        <div class="control-item">
-          <h3>#02</h3>
-          <p>Система менеджмента <b>соответстует ГОСТ</b> Р. ИСО 9001-2008.</p>
-        </div>
-        <div class="control-item">
-          <h3>#03</h3>
-          <p>2-х ступенчатый <b>контроль качества</b> на производстве</p>
-        </div>
-        <div class="control-item">
-          <h3>#04</h3>
-          <p><b>Гарантия 2 года</b>, постгарантийное обслуживание, сервис 24 часа в сутки</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="chose">
-    <div class="container">
-      <h2 class="title"><b>Мы спросили у 385 клиентов почему они выбрали нас</b> и они выделили следующие причины:</h2>
-      <div class="chose-row">
-        <div class="chose-item">
-          <img src="img/chose/item-1.jpg" alt="">
-          <b>Собственное<br> производство</b>
-          <p>Технологический процесс отлажен годами. Каждое изделие проходит 2-х ступенчатый контроль качества на производстве</p>
-        </div>
-        <div class="chose-item">
-          <img src="img/chose/item-2.jpg" alt="">
-          <b>Качественное сырье,<br> фурнитура и комплектующие</b>
-          <p>Высочайшая сталь, немецкие и французские механизмы гарантируют надежную работу ворот</p>
-        </div>
-        <div class="chose-item">
-          <img src="img/chose/item-3.jpg" alt="">
-          <b>Срок выполнения заказа — <br>от 5 дней</b>
-          <p>Производственные мощности позволяют выпускать до 3 000 единиц продукции в&nbsp;месяц</p>
-        </div>
-        <div class="chose-item">
-          <img src="img/chose/item-4.jpg" alt="">
-          <b>Сервисная поддержка<br> в режиме 24/7</b>
-          <p>Если возникнут вопросы во время эксплуатации, менеджер поможет разрешить вашу ситуацию круглосуточно</p>
-        </div>
-        <div class="chose-item">
-          <img src="img/chose/item-5.jpg" alt="">
-          <b>Широкая сеть диллеров<br> и партнеров</b>
-          <p>Более 500 партеров по России и СНГ помогут вам обслуживать ворота и дадут выгодные условия на поставку</p>
-        </div>
-        <div class="chose-item">
-          <img src="img/chose/item-6.jpg" alt="">
-          <b>Надежность подтвержденная сертификатами</b>
-          <p>Все изделия проходят обязательную сертификацию в аккредитованных лабораториях</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="present">
-    <div class="container">
-      <div class="present-row">
-        <div class="present-video">
-          <a href="javascript:;" class="present-video__block"></a>
-          <div class="present-video__tap">Посмотрите 2-х минутное видео<br> с производственного цеха</div>
-        </div>
-        <div class="present-text">
-          <h2 class="title">«<span>Р</span>олМастер» поставляет продукцию <b>по&nbsp;всей России и&nbsp;СНГ</b> <i>с&nbsp;1996 года</i></h2>
-          <h3>За 24 года работы мы выиграли 26 тендеров, произвели и установили более 25 000 продукции и запустили 3 производства</h3>
-          <ul class="present-list">
-            <li>
-              <img src="img/present/item-1.png" alt="">
-              <span>
-                <b>свыше 1 500</b>
-                <p>заказов реализовали<br> за 2019 год</p>
-              </span>
-            </li>
-            <li>
-              <img src="img/present/item-2.png" alt="">
-              <span>
-                <b>запустили 3 завода</b>
-                <p>что обеспечивает бесперебойную поставку комплектующих для вашего заказа</p>
-              </span>
-            </li>
-            <li>
-              <img src="img/present/item-3.png" alt="">
-              <span>
-                <b>обучили более 500 партнёров </b>
-                <p>по всей России работе с нашей продукцией для&nbsp;идеального монтажа</p>
-              </span>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="delivery">
-    <div class="container">
-      <h2 class="title"><b>Доставим в любой город</b> России<br> и страны СНГ <i>точно в срок</i></h2>
-      <h4>А более 500 официальных дилеров и партнеров по регионам сделают монтаж с гарантией 1 год</h4>
-      <div class="delivery-row">
-        <div class="form delivery-form">
-          <h3><b>Узнайте, кто сделает монтаж в&nbsp;вашем городе</b></h3>
-          <form method="post" class="js-form">
-            <label class="form-label">
-              <span>Заполните форму ниже, мы свяжемся<br> в&nbsp;ближайшее время и уточним компании<br> в&nbsp;вашем регионе</span>
-            </label>
-            <label class="form-label">
-              <input type="tel" name="phone" class="form-input masked" placeholder="Введите номер телефона" />
-            </label>
-            <label class="form-label">
-              <input type="text" name="city" class="form-input" placeholder="Введите ваш город" />
-            </label>
-            <div class="btn"><button class="btn-red">Получить список монтажных компаний</button></div>
-            <label class="form-politic">
-              <input type="checkbox" name="politic" checked/>
-              <span></span>
-              <p>Вы соглашаетесь с условиями обработки<br> персональных данных (<a href="politic.html">ознакомиться</a>)</p>
-            </label>
-          </form>
-        </div>
-        <img src="img/delivery-car.jpg" alt="" class="delivery-car">
-      </div>
-    </div>
-  </section>
+  @include('components/_ctaKP.html')
+  @include('components/_control.html')
+  @include('components/_chose.html')
+  @include('components/_present.html')
+  @include('components/_delivery.html')
 
   <section class="dealer">
     <div class="container">
@@ -497,103 +134,11 @@
       <img src="img/dealer-man.png" alt="" class="dealer-man">
     </div>
   </section>
-
-  <section class="certificates">
-    <div class="container">
-      <h2 class="title">21 сертификат и протоколы исследований <b>подтверждают качество и&nbsp;долговечность</b> продукции</h2>
-      <h4>Рольставни и ворота устойчивы к взломам, огнестойкие и готовы к работе в агрессивных средах и перепадах температур</h4>
-      <ul class="certificates-tabs">
-        <li><a href="#">ИСО Сертификаты</a></li>
-        <li><a href="#">Сертификаты<br> противовзлома</a></li>
-        <li class="active"><a href="#">Сертификаты<br> соответсвия</a></li>
-        <li><a href="#">Протоколы испытаний</a></li>
-        <li><a href="#">Дипломы<br> и свидетельства</a></li>
-        <li><a href="#">Лицензии</a></li>
-      </ul>
-      <div class="certificates-tab active">
-        <a href="img/certificates/full/item-13.jpg" class="certificates-item" data-fancybox="tab-3" style="background-image:url(img/certificates/item-13.jpg)"></a>
-        <a href="img/certificates/full/item-14.jpg" class="certificates-item" data-fancybox="tab-3" style="background-image:url(img/certificates/item-14.jpg)"></a>
-        <a href="img/certificates/full/item-15.jpg" class="certificates-item" data-fancybox="tab-3" style="background-image:url(img/certificates/item-15.jpg)"></a>
-        <a href="img/certificates/full/item-16.jpg" class="certificates-item" data-fancybox="tab-3" style="background-image:url(img/certificates/item-16.jpg)"></a>
-        <a href="img/certificates/full/item-17.jpg" class="certificates-item" data-fancybox="tab-3" style="background-image:url(img/certificates/item-17.jpg)"></a>
-        <a href="img/certificates/full/item-18.jpg" class="certificates-item" data-fancybox="tab-3" style="background-image:url(img/certificates/item-18.jpg)"></a>
-        <a href="img/certificates/full/item-19.jpg" class="certificates-item" data-fancybox="tab-3" style="background-image:url(img/certificates/item-19.jpg)"></a>
-        <a href="img/certificates/full/item-20.jpg" class="certificates-item" data-fancybox="tab-3" style="background-image:url(img/certificates/item-20.jpg)"></a>
-      </div>
-    </div>
-  </section>
-
-  <section class="documentation">
-    <div class="container">
-      <h2 class="title"><b>Техническая документация</b></h2>
-      <ul class="documentation-tabs">
-        <li><a href="#">Техническая документация</a></li>
-        <li><a href="#">Технические данные</a></li>
-        <li class="active"><a href="#">Чертежи, Схемы, Таблицы</a></li>
-        <li><a href="#">Тендерная документация</a></li>
-      </ul>
-      <div class="documentation-tab active">
-        <ul class="documentation-list">
-          <li><a target="_blank" href="files/Svodnaya_tablitsa_kolichestva_stavnej_ot_vysoty.pdf">Количество ставней от высоты (сводная таблица).pdf</a></li>
-          <li><a target="_blank" href="files/Tablitsa_diametrov_namotki_rulonov_iz_profilya_ST-60_60P.pdf">Таблица диаметров намотки рулонов из профиля СТ-60, 60(П).pdf</a></li>
-          <li><a target="_blank" href="files/Tablitsa_diametrov_namotki_rulonov_iz_profilya_ST-75_75P.pdf">Таблица диаметров намотки рулонов из профиля СТ-75, 75(П).pdf</a></li>
-          <li><a target="_blank" href="files/Tablitsa_diametrov_namotki_rulonov_iz_profilya_ST-105_105P.pdf">Таблица диаметров намотки рулонов из профиля СТ-105, 105(П).pdf</a></li>
-          <li><a target="_blank" href="files/Tablitsa_diametrov_namotki_rulonov_iz_profilya_ST-115_115P.pdf">Таблица диаметров намотки рулонов из профиля СТ-115, 115(П).pdf</a></li>
-          <li><a target="_blank" href="files/Konstruktivnaya_shema_bolshih_rulonnyh_vorot_s_bokovym_privodom.pdf">Конструктивная схема больших рулонных ворот с боковым приводом.pdf</a></li>
-        </ul>
-        <ul class="documentation-list">
-          <li><a target="_blank" href="files/Konstruktivnaya_shema_bolshih_rulonnyh_vorot_s_vnutrivalnymi_privodom.pdf">Конструктивная схема больших рулонных ворот с внутривальными приводом.pdf</a></li>
-          <li><a target="_blank" href="files/Sxema_konsolnogo_mexanizma.pdf">Схема консольного механизма высоких рулонных ворот.pdf</a></li>
-          <li><a target="_blank" href="files/Varianty_ustanovki_rolstavnej.pdf">Варианты установки рольставен.pdf</a></li>
-          <li><a target="_blank" href="files/Varianty_zaschitnyh_korobov_i_napravlyayuschih_shin.pdf">Варианты защитных коробов и направляющих шин.pdf</a></li>
-          <li><a target="_blank" href="files/Parametry_napravlyayuschej_shiny_dlya_ST-75P.pdf">Параметры направляющей шины для СТ-75, - 75П.pdf</a></li>
-          <li><a target="_blank" href="files/Parametry_napravlyayuschej_shiny_dlya_ST-105_-105P.pdf">Параметры направляющей шины для СТ-105,-105П.pdf</a></li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section class="expert">
-    <div class="container">
-      <h2 class="title"><b>Скорее всего мы уже решали задачу</b>, аналогичную вашей</h2>
-      <div class="expert-quote">
-        <p>Поэтому точно знаем сколько времени займет выполнение и каким будет бюджет</p>
-        <p><b>Сегодня <span>Р</span>олМастер входит в тройку крупнейших поставщиков России и&nbsp;продолжает расширяться</b></p>
-        <p>Это произошло благодаря нашему сервису: работаем так, чтобы клиенты были довольны каждым моментом сотрудничества.</p>
-      </div>
-      <div class="expert-form">
-        <b>Чтобы обсудить задачу с экспертом, узнать стоимость и сроки производства оборудования, просто оставьте телефон:</b>
-        <form method="post" class="js-form">
-          <input type="tel" name="phone" placeholder="+7 (900) 000-00-00" class="input input-voice masked" />
-          <button class="btn-red">Обсудить задачу с экспертом</button>
-        </form>
-      </div>
-      <img src="img/expert-man.png" class="expert-man" alt="">
-    </div>
-  </section>
-
-  <section class="footer">
-    <div class="container">
-      <div class="footer-logo">
-        <img src="img/logo-white.svg" alt="">
-        <p>Производство, продажа и монтаж рольставней и автоматических ворот по России и СНГ с 1996 года<br><br>© Все права защищены 1996-2020<br><br><a href="politic.html">Политика конфиденциальности</a></p>
-      </div>
-      <ul class="footer-menu">
-        <li><a href="/">О компании</a></li>
-        <li><a href="#">Рольставни</a></li>
-        <li><a href="#">Ворота</a></li>
-        <li><a href="service.html">Доставка, оплата, монтаж</a></li>
-        <li><a href="dealer.html">Стать дилером</a></li>
-        <li><a href="#">Техническая документация</a></li>
-      </ul>
-      <div class="footer-info">ООО «РолМастер»<br>ИНН 129590233215<br>ОГРН 429013549518<br><a href="#">Скачать реквизиты</a></div>
-      <div class="footer-info">info@rolmaster.ru<br><br><a href="#">Как проехать в офис</a><br><a href="#">Как проехать на склад</a></div>
-      <div class="footer-contact">
-        <a href="tel:88007707560">8 800 770 75 60</a>
-        <p>Бесплатный звонок<br>из любой точки РФ<br><br>Офис —  г. Москва,ул. Воронцовская, д, 24/6, стр. 2<br><br>Склад — Люберецкий р-н, Малаховка пос., Касимовское ш., д.3а</p>
-      </div>
-    </div>
-  </section>
+  
+  @include('components/_certificates.html')
+  @include('components/_documentation.html')
+  @include('components/_expert.html')
+  @include('components/_footer.html')
   
   <script src="js/app.min.js"></script>
 </body>
