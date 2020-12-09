@@ -1,8 +1,15 @@
 .production
+  &-gate
+    padding-top: 70px
+    .title
+      max-width: 1024px
+      margin: 0 auto
+  &.gate .production-tabs:before
+    display: none
   &-tabs
     @include flexbox
     align-items: center
-    height: 157px
+    // height: 157px
     border-radius: 12px
     border: 1px solid #E7E7F1
     padding: 9px 9px 0
@@ -51,12 +58,13 @@
     // display: none
     height: 0
     background: #ffffff
+    visibility: hidden
     // overflow: hidden
     &.active
       @include flexbox
       align-items: flex-start
       height: inherit
-      overflow initial
+      visibility: visible
   &-carousel
     width: 100%
     padding: 0 45px
