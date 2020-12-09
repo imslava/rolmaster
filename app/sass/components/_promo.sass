@@ -3,6 +3,23 @@
   background: $color-light-blue
   padding: 110px 0 100px
   margin-top: 130px
+  &-bg
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    width: 50%
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: center center
+    &:before
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+      background: linear-gradient(90deg, $color-light-blue 0%, rgba(255, 255, 255, 0) 70%)
   h1
     font-weight: 400
     font-size: 40px

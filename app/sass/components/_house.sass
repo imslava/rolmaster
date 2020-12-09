@@ -1,0 +1,45 @@
+.house
+  background: $color-light-blue
+  overflow: hidden
+  padding: 80px 0 70px
+  margin-bottom: -70px
+  &-block
+    border-radius: 12px
+    background: #ffffff
+    box-shadow: 0px 4px 60px rgba(163, 169, 183, 0.15)
+    position: relative
+    padding: 50px
+    &:before
+      content: ''
+      position: absolute
+      top: 6px
+      bottom: -6px
+      left: 20px
+      right: 20px
+      border-radius: 12px
+      background: $color-red
+      z-index: -1
+  .title
+    text-align: left
+    max-width: 710px
+  h3
+    font-weight: 400
+    font-size: 18px
+    max-width: 465px
+    color: #8c94a2
+    margin: 20px 0 40px
+  form
+    @include flexbox
+    align-items: flex-start
+    max-width: 640px
+  .form-input
+    max-width: 310px
+    margin-right: 20px
+  .btn-red
+    width: 310px
+  .form-politic
+    margin-left: 330px !important
+  &-book
+    position: absolute
+    top: -30px
+    right: -240px

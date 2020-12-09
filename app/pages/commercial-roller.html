@@ -58,31 +58,9 @@
   </section>
 
   @include('components/_brand.html')
-
   @include('components/_portfolio.html', { "type": "рольставен", "class": "commercial" })
-
   @include('components/_ctaKP.html')
-
-  <section class="safety">
-    <div class="container">
-      <h1 class="title"><b>Ваше имущество в безопасности</b> – рольставни <i>выдерживают попытки вскрытия</i> топором, молотком и дрелью</h1>
-      <h4>Нашу конструкцию невозможно вырвать, а полотно выдерживает взлом с использованием тяжелого инструмента на протяжении 30 мин, благодаря использованию в производстве оцинкованной стали и усиленной конструкции</h4>
-      <div class="safety-list">
-        <ul>
-          <li>Выдерживают 30 минут прямого горения. Есть шанс аварийного открытия даже после продолжительного контакта с огнем</li>
-          <li>Не подвержены коррозии<br> и не требуют никакого ухода</li>
-          <li>Экологический чистая краска,<br> не выделяет токсичных испарений</li>
-          <li>Не деформируются со временем<br> и выдерживают температуры до -30°С</li>
-          <li>Выдерживают повышенные снеговые и ветровые нагрузки</li>
-        </ul>
-        <div class="safety-list__circle"><img src="img/safety-rollet.png" alt=""></div>
-      </div>
-      <div class="safety-badge">
-        <h3>Рольставни прослужат 20 лет и больше</h3>
-        <p>Все гарантийные обязательства закреплены в договоре и&nbsp;мы несем финансовую ответственность за их выполнение</p>
-      </div>
-    </div>
-  </section>
+  @include('components/_safety-roller.html')
 
   <section class="make">
     <div class="container">
@@ -107,100 +85,12 @@
 
   @include('components/_ctaKP.html')
   @include('components/_colors300.html')
-
-  <section class="order">
-    <div class="container">
-      <h1 class="title"><b>Соберём заказ в соответствии с вашим тех.заданием</b> <i>или поможем определиться с деталями</i></h1>
-      <ul class="order-tabs">
-        <li class="active" data-tab="1">Профили</li>
-        <li data-tab="2">Кнопки управления</li>
-        <li data-tab="3">Приводы для ворот</li>
-      </ul>
-      <div class="order-tab active" data-tab="1">
-        <h3>Профили</h3>
-        <p>Благодаря особому способу соединения конструкции могут<br> достигать 13,8м. в ширину и до 8м. в высоту.<br><br> Все виды стальных ламелей имеют перфорированные аналоги</p>
-        <div class="order-list">
-          <div class="order-item">
-            <div class="order-item__img"><img src="img/order/item-1.jpg" alt=""></div>
-            <b>СТ - 60</b>
-          </div>
-          <div class="order-item">
-            <div class="order-item__img"><img src="img/order/item-2.jpg" alt=""></div>
-            <b>СТ - 60П</b>
-          </div>
-          <div class="order-item">
-            <div class="order-item__img"><img src="img/order/item-3.jpg" alt=""></div>
-            <b>СТ - 75</b>
-          </div>
-          <div class="order-item">
-            <div class="order-item__img"><img src="img/order/item-4.jpg" alt=""></div>
-            <b>СТ - 75П</b>
-          </div>
-          <div class="order-item">
-            <div class="order-item__img"><img src="img/order/item-5.jpg" alt=""></div>
-            <b>СТ - 105</b>
-          </div>
-          <div class="order-item">
-            <div class="order-item__img"><img src="img/order/item-6.jpg" alt=""></div>
-            <b>СТ - 115</b>
-          </div>
-        </div>
-      </div>
-      <div class="order-tab" data-tab="2">
-        <h3>Кнопки управления</h3>
-        <div class="order-list">
-          <div class="order-item">
-            <div class="order-item__img"><img src="img/order/item-7.jpg" alt=""></div>
-            <p>Накладные<br> поворотные<br> выключатели</p>
-          </div>
-          <div class="order-item">
-            <div class="order-item__img"><img src="img/order/item-8.jpg" alt=""></div>
-            <p>Встроенные<br> поворотные<br> выключатели</p>
-          </div>
-          <div class="order-item">
-            <div class="order-item__img"><img src="img/order/item-9.jpg" alt=""></div>
-            <p>Встроенные<br> клавишные<br> выключатели</p>
-          </div>
-          <div class="order-item">
-            <div class="order-item__img"><img src="img/order/item-10.jpg" alt=""></div>
-            <p>Замковые<br> встроенные<br> выключатели</p>
-          </div>
-          <div class="order-item">
-            <div class="order-item__img"><img src="img/order/item-11.jpg" alt=""></div>
-            <p>Накладные<br> замковые<br> выключатели</p>   
-          </div>
-        </div>
-      </div>
-      <div class="order-tab" data-tab="3">
-        <h3>Приводы для ворот</h3>
-        <p>Электроприводы рольставен, роллет и рулонных ворот весом от 20кг до 1000кг, для RolMaster на партнерских условиях поставляются всемирно известными корпорациями SOMFY (Франция и Европейский Союз) и GUNTNER GRUPPE (Германия).</p>
-        <div class="order-list">
-          <div class="order-item">
-            <div class="order-item__img"><img src="img/order/item-12.jpg" alt=""></div>
-            <p>Навальный<br> привод</p>
-          </div>
-          <div class="order-item">
-            <div class="order-item__img"><img src="img/order/item-13.jpg" alt=""></div>
-            <p>Боковой<br> привод</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="warranty">
-    <div class="container">
-      <h1 class="title"><b>Вы получаете сразу 4 гарантии</b>,<br> потому что мы <i>уверенны в качестве работы на 100%</i></h1>
-      <h4>Все гарантийные обязательства закреплены в договоре и&nbsp;мы несем финансовую ответственность за их выполнение</h4>
-    </div>
-  </section>
-
+  @include('components/_order.html')
+  @include('components/_warranty.html')
   @include('components/_control.html')
   @include('components/_chose.html')
   @include('components/_present.html')
   @include('components/_delivery.html')
-
-  
   @include('components/_certificates.html')
   @include('components/_documentation.html')
   @include('components/_expert.html')

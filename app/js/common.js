@@ -14,7 +14,8 @@ $(document).ready(function(){
 	$('.js-validate').validate({
 		rules: {
 			name: {required: true},
-			phone: {required: true}
+			phone: {required: true},
+			email: {required: true}
 		}
 	});
 
@@ -109,15 +110,32 @@ $(document).ready(function(){
 		container: '.form-calendar',
 		startDate: 'today',
     language: 'ru-RU'
+	});
+	
+	$('[data-toggle="datepicker2"]').datepicker({
+    autoHide: true,
+		autoPick: true,
+		inline: true,
+		container: '.form-calendar2',
+		startDate: 'today',
+    language: 'ru-RU'
   });
 
 	$('.form-date').hide();
+	$('.form-date2').hide();
 
 	$('.js-open-date').click(function(){
 		$('.form-date').fadeIn();
 	});
 	$('.js-close-date').click(function(){
 		$('.form-date').fadeOut();
+	});
+
+	$('.js-open-date2').click(function(){
+		$('.form-date2').fadeIn();
+	});
+	$('.js-close-date2').click(function(){
+		$('.form-date2').fadeOut();
 	});
 
 	// валидация форм
@@ -212,6 +230,54 @@ $(document).ready(function(){
 		$('.order-tab').removeClass("active").hide();
 		$('.order-tab[data-tab=' + id + ']').addClass("active").fadeIn();
 
+	});
+
+	// рольставни для дома
+	$(".forhome-tabs li").click(function (){
+	  var $this = $(this),
+	      id    = $this.data("tab");	
+
+	  $(".forhome-tabs li").removeClass("active");
+		$(".forhome-tabs li[data-tab=" + id + "]").addClass("active");
+
+		$('.forhome-tab').removeClass("active").hide();
+		$('.forhome-tab[data-tab=' + id + ']').addClass("active").fadeIn();
+
+	});
+
+	// производство
+	$(".production-tabs li").click(function (){
+	  var $this = $(this),
+	      id    = $this.data("tab");	
+
+	  $(".production-tabs li").removeClass("active");
+		$(".production-tabs li[data-tab=" + id + "]").addClass("active");
+
+		$('.production-tab').removeClass("active").hide();
+		$('.production-tab[data-tab=' + id + ']').addClass("active").fadeIn();
+
+	});
+
+	// if($(window).width() > 475){
+	// 	var height = 460;
+	// }else if($(window).width() < 475 && $(window).width() > 375){
+	// 	var height = 320;
+	// }else if($(window).width() < 375){
+	// 	var height = 260;
+	// }
+
+	$('.fotorama').fotorama({
+		nav: 'thumbs',
+		fit: 'cover',
+		height: 300,
+		thumbheight: 73
+	});
+
+	$(".production-carousel-1, .production-carousel-2, .production-carousel-3, .production-carousel-4, .production-carousel-5, .production-carousel-6").slick({
+		arrows: true,
+		fade: true,
+		infinite: true,
+		dots: false
 	});
 
 });

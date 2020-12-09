@@ -1,0 +1,86 @@
+.forhome
+  padding: 70px 0 80px
+  .title
+    max-width: 540px
+    margin: 0 auto 30px
+  &-tabs
+    @include flexbox
+    align-items: center
+    height: 84px
+    border-radius: 12px
+    border: 1px solid #E7E7F1
+    padding: 9px
+    margin-bottom: 30px
+    li
+      width: calc(100% / 4)
+      text-align: center
+      border-left: 1px solid #E7E7F1
+      height: 64px
+      @include flexbox
+      align-items: center
+      justify-content: center
+      font-size: 14px
+      cursor: pointer
+      transition: .3s
+      &:first-child
+        border-left: 1px solid #fff
+      &:hover
+        background: $color-light-blue
+        border-radius: 6px
+        border-left: 1px solid #fff
+        & + li
+          border-left: 1px solid #fff
+      &.active
+        background: #e7e7f1
+        border-radius: 6px
+        border-left: 1px solid #fff
+        & + li
+          border-left: 1px solid #fff
+      a
+        color: $color-black
+  &-tab
+    margin: 0 -15px
+    display: none
+    &.active
+      @include flexbox
+      align-items: flex-start
+  .col
+    width: calc(100% - 30px)
+    margin: 0 15px
+  .col-2
+    width: calc(100% / 2 - 30px)
+    margin: 0 15px
+  h3
+    text-align: center
+    font-size: 24px
+    color: $color-red
+    margin-bottom: 20px
+  &-item
+    border-radius: 6px
+    border: 1px solid #E7E7F1
+    padding: 20px
+    @include flexbox
+    align-items: flex-start
+    margin-bottom: 10px
+    &__img
+      @include flexbox
+      align-items: center
+      justify-content: center
+      border-radius: 3px
+      border: 1px solid #E7E7F1
+      width: 130px
+      height: 130px
+    &__text
+      width: calc(100% - 130px)
+      padding-left: 20px
+      h4
+        font-size: 18px
+      p
+        font-size: 14px
+        margin-top: 10px
+  &-btn
+    justify-content: center
+    margin-top: 40px
+  &-text p
+    margin-bottom: 30px
+    display: block

@@ -1,0 +1,112 @@
+.production
+  &-tabs
+    @include flexbox
+    align-items: center
+    height: 157px
+    border-radius: 12px
+    border: 1px solid #E7E7F1
+    padding: 9px 9px 0
+    margin: 30px 0 20px
+    position: relative
+    &:before
+      content: ''
+      position: absolute
+      top: 0
+      left: 10px
+      right: 10px
+      bottom: 0
+      margin: auto 0
+      height: 1px
+      background: #e7e7f1
+    li
+      width: calc(100% / 3)
+      text-align: center
+      border-left: 1px solid #E7E7F1
+      height: 64px
+      @include flexbox
+      align-items: center
+      justify-content: center
+      font-size: 14px
+      cursor: pointer
+      transition: .3s
+      margin-bottom: 9px
+      &:first-child, &:nth-child(4)
+        border-left: 1px solid #fff
+      &:hover
+        background: $color-light-blue
+        border-radius: 6px
+        border-left: 1px solid #fff
+        & + li
+          border-left: 1px solid #fff
+      &.active
+        background: #e7e7f1
+        border-radius: 6px
+        border-left: 1px solid #fff
+        & + li
+          border-left: 1px solid #fff
+      a
+        color: $color-black
+  &-tab
+    // margin: 0 45px
+    // display: none
+    height: 0
+    background: #ffffff
+    // overflow: hidden
+    &.active
+      @include flexbox
+      align-items: flex-start
+      height: inherit
+      overflow initial
+  &-carousel
+    width: 100%
+    padding: 0 45px
+  &-item
+    display: flex !important
+    flex-wrap: wrap
+    align-items: flex-start
+  &-photo
+    width: 50%
+    padding-right: 15px
+  &-info
+    width: 50%
+    padding-left: 15px
+  &-text
+    min-height: 310px
+    h4
+      font-size: 24px
+      padding: 20px 0 30px
+
+  .fotorama__stage__frame,
+  .fotorama__thumb,
+  .fotorama__thumb-border
+    border-radius: 6px
+  .fotorama__thumb-border
+    border-color: $color-red
+    margin: 10px 0 0!important
+  .fotorama__nav--thumbs .fotorama__nav__frame
+    padding: 10px 2px 2px 0 !important
+
+  .slick-arrow
+    position: absolute
+    top: 0
+    bottom: 0
+    margin: auto 0
+    z-index: 100
+    width: 60px
+    height: 60px
+    border-radius: 60px
+    border: 0
+    font-size: 0
+    cursor: pointer
+    transition: .3s
+    &:hover
+      box-shadow: 0px 0px 20px -13px rgba(255, 0, 0, 0)
+  .slick-prev
+    left: -30px
+    transform: rotate(180deg)
+    background: url(../img/icons/portfolio-arrow.svg) no-repeat left 26px center, linear-gradient(0deg, rgba(255, 0, 0, 0.47) 0%, rgba(255, 0, 0, 0.94) 100%), #fff
+    box-shadow: 0px -20px 20px -13px rgba(255, 0, 0, 0.35)
+  .slick-next
+    right: -30px
+    background: url(../img/icons/portfolio-arrow.svg) no-repeat left 26px center, linear-gradient(180deg, rgba(255, 0, 0, 0.47) 0%, rgba(255, 0, 0, 0.94) 100%), #fff
+    box-shadow: 0px 20px 20px -13px rgba(255, 0, 0, 0.35)
