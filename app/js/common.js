@@ -11,14 +11,6 @@ $(document).ready(function(){
 		showMaskOnHover: false
 	});
 
-	$('.js-validate').validate({
-		rules: {
-			name: {required: true},
-			phone: {required: true},
-			email: {required: true}
-		}
-	});
-
 	function scroll() {
 		$(".js-scroll").on("click", function (event) {
 			event.preventDefault();
