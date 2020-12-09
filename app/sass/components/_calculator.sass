@@ -1,0 +1,76 @@
+.calculator
+  background: $color-light-blue
+  padding: 110px 0 80px
+  margin-top: 130px
+  .container
+    @include flexbox
+    align-items: flex-start
+  &-right
+    max-width: 430px
+    margin-left: auto
+    .form:first-child
+      margin-bottom: 50px
+  &-left
+    max-width: 570px
+    h1
+      font-size: 40px
+      color: $color-red
+    h3
+      font-size: 17px
+      margin-top: 25px
+      font-weight: 400
+      opacity: 0.7
+      margin-bottom: 20px
+  &-form
+    @include flexbox
+    margin: 0 -15px
+  &-label
+    width: calc(100% - 30px)
+    margin: 40px 15px 0
+    b
+      font-size: 18px
+      display: block
+      margin-bottom: 10px
+  &-input
+    display: block
+    width: 100%
+    border-radius: 3px
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.05)
+    background: #ffffff
+    height: 54px
+    padding-left: 20px
+    border: 0
+  &-col-2
+    width: calc(100% / 2 - 30px)
+
+@include media(xl) // 1200
+  .calculator-right
+    max-width: 394px
+
+@include media(lg) // 1024
+  .calculator-left,
+  .calculator-right
+    max-width: 100%
+  .calculator-right
+    margin: 40px auto 0
+
+// @include media(md) // 768
+
+@include media(sm) // 576
+  .calculator-col-2
+    width: calc(100% - 30px)
+
+@include media(xs) //475
+  .calculator
+    margin-top: 122px
+
+  .calculator
+    padding: 40px 0 50px
+    h1
+      font-size: 24px
+
+@include media(xxs) // 375
+  .calculator
+    margin-top: 106px
+  .calculator-label
+    margin-top: 30px

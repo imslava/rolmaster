@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="language" content="Russian">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="robots" content="index,follow">
+    <meta name="title" content="RolMaster - Получите расчет вашего заказа за 29 минут">
+    <meta name="description" content="Производство, продажа и монтаж рольставней и автоматических ворот по России и СНГ с 1996 года">
+    <title>RolMaster - Получите расчет вашего заказа за 29 минут</title>
+    <link rel="stylesheet" href="css/app.min.css">
+  </head>
+<body>
+
+  @include('components/_popup.html')
+  @include('components/_header.html', {
+    "link1": "",
+    "link2": "",
+      "link2-1": "",
+      "link2-2": "",
+    "link3": "",
+      "link3-1": "",
+      "link3-2": "",
+    "link4": "",
+    "link5": "active",
+    "link6": ""
+  })
+
+  <section class="calculator">
+    <div class="container">
+      <div class="calculator-left">
+        <h1>Получите расчет вашего заказа за 29 минут</h1>
+        <h3>Заполните форму ниже, если знаете размеры</h3>
+        <form class="calculator-form">
+          <label class="calculator-label">
+            <b>Укажите тип изделия</b>
+          </label>
+          <label class="calculator-label calculator-col-2">
+            <b>Укажите высоту проема, мм</b>
+            <input type="text" name="" placeholder="Высота проема, мм" class="calculator-input" />
+          </label>
+          <label class="calculator-label calculator-col-2">
+            <b>Укажите ширину проема, мм</b>
+            <input type="text" name="" placeholder="Ширина проема, мм" class="calculator-input" />
+          </label>
+          <label class="calculator-label calculator-col-2">
+            <b>Выберите шит ворот</b>
+            <select class="calculator-input">
+              <option value="">Выберите вариант</option>
+              <option value="">Выберите вариант</option>
+              <option value="">Выберите вариант</option>
+            </select>
+          </label>
+          <label class="calculator-label calculator-col-2">
+            <b>Выберите обшивку</b>
+            <select class="calculator-input">
+              <option value="">Выберите вариант</option>
+              <option value="">Выберите вариант</option>
+              <option value="">Выберите вариант</option>
+            </select>
+          </label>
+          <label class="calculator-label calculator-col-2">
+            <b>Укажите материал обшивки</b>
+            <select class="calculator-input">
+              <option value="">Выберите вариант</option>
+              <option value="">Выберите вариант</option>
+              <option value="">Выберите вариант</option>
+            </select>
+          </label>
+          <label class="calculator-label calculator-col-2">
+            <b>Выберите тип покраски</b>
+            <select class="calculator-input">
+              <option value="">Выберите вариант</option>
+              <option value="">Выберите вариант</option>
+              <option value="">Выберите вариант</option>
+            </select>
+          </label>
+          <label class="calculator-label calculator-col-2">
+            <b>Монтаж</b>
+            <select class="calculator-input">
+              <option value="">Выберите вариант</option>
+              <option value="">Выберите вариант</option>
+              <option value="">Выберите вариант</option>
+            </select>
+          </label>
+          <label class="calculator-label calculator-col-2">
+            <b>Укажите тип управления</b>
+            <select class="calculator-input">
+              <option value="">Выберите вариант</option>
+              <option value="">Выберите вариант</option>
+              <option value="">Выберите вариант</option>
+            </select>
+          </label>
+          <label class="calculator-label">
+            <b>Выберите дополнительные аксессуары</b>
+          </label>
+          <label class="calculator-label">
+            <b>Укажите адрес, где будет производится монтаж</b>
+            <input type="text" name="" placeholder="г. Москва, ул. Механическая 12а" class="calculator-input" />
+          </label>
+          <label class="calculator-label">
+            <b>Укажите дополнительные пожелания по заказу</b>
+            <textarea name="" cols="30" rows="10" class="calculator-input" placeholder="Например: Требуется постгарантийное обслуживание"></textarea>
+          </label>
+          <label class="calculator-label">
+            <b>Укажите номер телефона</b>
+            <input type="text" name="" placeholder="Введите номер телефона" class="calculator-input masked" />
+          </label>
+          <label class="calculator-label">
+            <div class="btn"><button class="btn-red">Получить расчет за 20 минут</button></div>
+          </label>
+        </form>
+      </div>
+      <div class="calculator-right">
+        <div class="form">
+          <h3><b>Не знаете, какие данные указывать?</b></h3>
+          <form method="post" class="js-form">
+            <label class="form-label">
+              <span>Давайте созвонимся, все обсудим<br> и сэкономим ваше время</span>
+            </label>
+            <label class="form-label">
+              <input type="tel" name="phone" class="form-input masked" placeholder="Введите номер телефона" />
+            </label>
+            <div class="btn"><button class="btn-red">Позвоните мне</button></div>
+            <label class="form-politic">
+              <input type="checkbox" name="politic" checked/>
+              <span></span>
+              <p>Вы соглашаетесь с условиями обработки<br> персональных данных (<a href="politic.html">ознакомиться</a>)</p>
+            </label>
+          </form>
+        </div>
+        <div class="form">
+          <h3><b>У вас есть техническое задание?</b></h3>
+          <form method="post" class="js-form">
+            <label class="form-label">
+              <span>Просто прикрепите его ниже, <br>мы сделаем все расчеты самостоятельно</span>
+            </label>
+            <label class="form-label form-file">
+              <span>Загрузите техническое задание (при наличии)</span>
+              <input type="file" name="file">
+              <p>Загрузить техническое задание</p>
+            </label>
+            <label class="form-label">
+              <span>Менеджер свяжется с вами,<br> чтобы уточнить детали заказа</span>
+              <input type="tel" name="phone" class="form-input masked" placeholder="Введите номер телефона" />
+            </label>
+            <div class="btn"><button class="btn-red">Рассчитать по ТЗ</button></div>
+            <label class="form-politic">
+              <input type="checkbox" name="politic" checked/>
+              <span></span>
+              <p>Вы соглашаетесь с условиями обработки<br> персональных данных (<a href="politic.html">ознакомиться</a>)</p>
+            </label>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  @include('components/_footer.html')
+  
+  <script src="js/app.min.js"></script>
+</body>
+</html>
