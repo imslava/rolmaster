@@ -72,6 +72,7 @@ function buildcopy() {
 		'app/img/**/*',
 		'app/files/**/*',
 		'app/fonts/**/*',
+		'app/favicon/**/*',
 		'app/*.html',
 		], { base: 'app' })
 	.pipe(dest('dist'))
@@ -82,6 +83,7 @@ function versionFile(){
 	return src('dist/*.html')
 		.pipe(replace('app.min.css', 'app.min.css?v=' + randomVersion + ''))
 		.pipe(replace('app.min.js', 'app.min.js?v=' + randomVersion + ''))
+		.pipe(replace('v=randomVersion', 'v=' + randomVersion + ''))
 	.pipe(dest('dist'))
 }
 
