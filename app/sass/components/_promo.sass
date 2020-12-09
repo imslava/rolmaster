@@ -3,6 +3,7 @@
   background: $color-light-blue
   padding: 110px 0 100px
   margin-top: 130px
+  overflow: hidden
   &-bg
     position: absolute
     top: 0
@@ -93,12 +94,15 @@
   &-gate
     h2
       margin-bottom: 50px
+      max-width: 600px
     .promo-measurer
       margin-bottom: 0
 
 @include media(xl) // 1200
   .promo-rollet
     right: -25px
+  .promo-gateimg
+    right: -475px
 
 @include media(lg) // 1024
   .promo-list__item
@@ -107,11 +111,18 @@
   .promo-list
     margin-top: 70px
   .promo-rating
-    right: 100px
+    right: 15px
   .promo-rollet
     width: 300px
     top: -40px
     right: -50px
+  .promo-bg:before
+    background: linear-gradient(90deg,#f5f7fa 0,rgba(255,255,255,0) 100%)
+  .promo-gate h2
+    max-width: 400px
+  .promo-gateimg
+    right: -405px
+    top: 110px
 
 @include media(md) // 768
   .promo h1
@@ -132,6 +143,14 @@
     margin-bottom: 20px
   .promo-rollet
     top: 155px
+  .promo-rollet-fix
+    margin-top: 30px
+
+  .promo-bg
+    display: none
+  .promo-gateimg
+    top: 250px
+    right: -360px
 
 @include media(sm) // 576
   .promo
@@ -141,6 +160,15 @@
   .promo-rollet
     width: 240px
     top: 125px
+
+  .text-left
+    text-align: center
+    .btn-icon__promo
+      display: none
+  
+  .promo-gateimg
+    top: 260px
+    right: -260px
 
 @include media(xs) //475
   .promo
@@ -164,7 +192,8 @@
   .promo-list__text
     padding-left: 10px
     font-size: 14px
-
+  .promo-measurer
+    margin-bottom: 0
 
 @include media(xxs) // 375
   .promo

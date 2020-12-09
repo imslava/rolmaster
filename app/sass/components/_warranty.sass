@@ -1,5 +1,6 @@
 .warranty
   padding: 70px 0 30px
+  overflow: hidden
   .title
     margin: 0 auto
     max-width: 1040px
@@ -11,6 +12,7 @@
     max-width: 560px
   &-row
     @include flexbox
+    align-items: flex-start
   &-list
     width: 570px
   &-item
@@ -54,3 +56,39 @@
   &-img
     margin-right: -20px
     margin-left: auto
+
+@include media(xl) // 1200
+  .warranty-img
+    width: 424px
+
+@include media(lg) // 1024
+  .warranty-list
+    width: 100%
+  .warranty-img
+    width: 100%
+    max-width: 80%
+    margin: 30px auto 0
+  .warranty-text p br
+    display: none
+
+// @include media(md) // 768
+
+@include media(sm) // 576
+  .warranty-number
+    margin: 0 auto
+  .warranty-item:before
+    display: none
+  .warranty-text
+    width: 100%
+    text-align: center
+    padding-left: 0
+    padding-top: 10px
+  .warranty-text h3
+    height: auto
+    justify-content: center
+
+@include media(xs) //475
+  .warranty h4
+    font-size: 18px
+
+// @include media(xxs) // 375

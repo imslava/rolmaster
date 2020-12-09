@@ -1,4 +1,5 @@
 .production
+  overflow: hidden
   &-gate
     padding-top: 70px
     .title
@@ -118,3 +119,58 @@
     right: -30px
     background: url(../img/icons/portfolio-arrow.svg) no-repeat left 26px center, linear-gradient(180deg, rgba(255, 0, 0, 0.47) 0%, rgba(255, 0, 0, 0.94) 100%), #fff
     box-shadow: 0px 20px 20px -13px rgba(255, 0, 0, 0.35)
+
+  &-gate-btn
+    margin: 20px 0 0 45px
+
+// @include media(xl) // 1200
+
+@include media(lg) // 1024
+  .production
+    padding-bottom: 80px
+  .production-carousel
+    padding: 0
+  .production-text h4
+    font-size: 20px
+    br
+      display: none
+  .production .title br
+    display: none
+  
+  .production-gate-btn
+    margin-left: 0
+
+// @include media(md) // 768
+
+@include media(sm) // 576
+  .production-photo
+    width: 100%
+    padding: 0
+  .production-info
+    width: 100% 
+    padding: 0
+
+  .production .slick-arrow
+    top: 120px
+    bottom: initial
+  .production-text
+    min-height: 0
+    padding-bottom: 20px
+  
+  .production-text h4
+    font-size: 18px
+    padding-bottom: 20px
+
+@include media(xs) //475
+  .production-tabs
+    height: auto
+    &:before
+      display: none
+    li
+      width: 100%
+      border-left: 1px solid #fff
+      border-bottom: 1px solid #e7e7f1
+      &:last-child
+        border-bottom: 1px solid #fff
+
+// @include media(xxs) // 375

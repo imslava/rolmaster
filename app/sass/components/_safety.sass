@@ -100,3 +100,76 @@
     & > *
       position: relative
       z-index: 5
+
+@include media(xl) // 1200
+  .safety-list ul li:nth-child(2)
+    left: 33px
+  .safety-list ul li:nth-child(3)
+    right: -7px
+  .safety-list ul li:nth-child(4)
+    left: 0
+    &:before
+      right: 29px
+      top: -30px
+  .safety-list ul li:nth-child(5)
+    right: 0
+    &:before
+      left: -1px
+      top: -30px
+
+@include media(lg) // 1024
+  .safety
+    padding-top: 0
+  .safety-list
+    height: 380px
+    ul li
+      width: 100% !important
+      max-width: 330px !important
+      text-align: left !important
+      left: 0 !important
+      right: 0 !important
+      top: 0 !important
+      margin: 0 0 30px auto!important
+      position: relative !important
+      // padding-top: 30px
+      br
+        display: none
+      &:before
+        top: 0 !important
+        left: -35px !important
+        right: initial !important
+  .safety-list__circle
+    top: -40px
+    left: -50px
+    right: initial
+    margin: 0
+    border: 0
+
+@include media(md) // 768
+  .safety-list__circle
+    left: -235px
+
+@include media(sm) // 576
+  .safety-list__circle
+    left: -335px
+
+@include media(xs) //475
+  .safety-list__circle
+    display: none
+  .safety-list
+    height: auto
+    ul li
+      max-width: calc(100% - 35px) !important
+      margin-left: 35px !important
+  
+  .safety-badge
+    padding: 20px 25px
+    h3
+      font-size: 18px
+    p
+      font-size: 14px
+  
+  .safety h4
+    font-size: 18px
+
+// @include media(xxs) // 375

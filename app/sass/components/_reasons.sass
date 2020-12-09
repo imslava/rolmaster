@@ -23,3 +23,21 @@
       padding: 0 10px
   &-gate
     padding-bottom: 70px
+
+// @include media(xl) // 1200
+
+// @include media(lg) // 1024
+
+@include media(md) // 768
+  .reasons-item
+    width: calc(100% / 2 - 30px)
+  .reasons .title br
+    display: none
+
+// @include media(sm) // 576
+
+@include media(xs) //475
+  .reasons-item
+    width: calc(100% - 30px)
+
+// @include media(xxs) // 375

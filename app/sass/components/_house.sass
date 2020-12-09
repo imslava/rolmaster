@@ -32,6 +32,8 @@
     @include flexbox
     align-items: flex-start
     max-width: 640px
+    position: relative
+    z-index: 2
   .form-input
     max-width: 310px
     margin-right: 20px
@@ -43,3 +45,33 @@
     position: absolute
     top: -30px
     right: -240px
+
+// @include media(xl) // 1200
+
+@include media(lg) // 1024
+  .house
+    .form-politic
+      margin-left: 0 !important
+    .btn
+      margin-top: 20px
+      width: 100%
+  .house-book
+    top: 115px
+
+@include media(md) // 768
+  .house-book
+    top: 260px
+
+// @include media(sm) // 576
+
+@include media(xs) //475
+  .house-block
+    padding: 20px
+
+@include media(xxs) // 375
+  .house .title
+    font-size: 18px
+  .house h3
+    font-size: 16px
+  .house-book
+    display: none

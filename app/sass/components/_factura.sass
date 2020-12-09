@@ -49,3 +49,19 @@
         bottom: -6px
         border: 1px solid #DDDDDD
         border-radius: 100%
+
+// @include media(xl) // 1200
+
+// @include media(lg) // 1024
+
+@include media(md) // 768
+  .factura-col
+    width: calc(100% - 30px)
+
+// @include media(sm) // 576
+
+@include media(xs) //475
+  .factura h4
+    font-size: 18px
+
+// @include media(xxs) // 375
