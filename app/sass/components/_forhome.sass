@@ -1,5 +1,6 @@
 .forhome
   padding: 70px 0 80px
+  overflow: hidden
   .title
     max-width: 540px
     margin: 0 auto 30px
@@ -84,10 +85,17 @@
   &-text p
     margin-bottom: 30px
     display: block
+  .col-colors300
+    @include flexbox
+    align-items: flex-start
+    margin: 0 15px
+    width: 100%
 
 // @include media(xl) // 1200
 
-// @include media(lg) // 1024
+@include media(lg) // 1024
+  .forhome .col-colors300
+    margin: 0
 
 @include media(md) // 768
   .forhome .col-2
