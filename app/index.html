@@ -620,5 +620,18 @@
 </section>
   
   <script src="js/app.min.js"></script>
+  <script>
+    $(".portfolio-carousel__content").slick({
+      arrows: true,
+      fade: true,
+      infinite: true,
+      dots: true,
+      appendDots: $('.portfolio-carousel__list'),
+      customPaging: function(slick,index) {
+        var title = slick.$slides.eq(index).find('.portfolio-carousel__item').data('title');
+        return title;
+      }
+    });
+  </script>
 </body>
 </html>

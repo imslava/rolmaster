@@ -33,19 +33,6 @@ $(document).ready(function(){
 		}
 	});
 
-	// карусель работ
-	$(".portfolio-carousel__content").slick({
-		arrows: true,
-		fade: true,
-		infinite: true,
-		dots: true,
-		appendDots: $('.portfolio-carousel__list'),
-		customPaging: function(slick,index) {
-			var title = slick.$slides.eq(index).find('.portfolio-carousel__item').data('title');
-			return title;
-		}
-	});
-
 	// сертификаты
 	// $(".certificates-tabs li").click(function (){
 	//   var $this = $(this),
@@ -238,28 +225,6 @@ $(document).ready(function(){
 		$('.production-tab').removeClass("active").hide();
 		$('.production-tab[data-tab=' + id + ']').addClass("active").fadeIn();
 
-	});
-
-	// if($(window).width() > 475){
-	// 	var height = 460;
-	// }else if($(window).width() < 475 && $(window).width() > 375){
-	// 	var height = 320;
-	// }else if($(window).width() < 375){
-	// 	var height = 260;
-	// }
-
-	$('.fotorama').fotorama({
-		nav: 'thumbs',
-		fit: 'cover',
-		height: 300,
-		thumbheight: 73
-	});
-
-	$(".production-carousel-1, .production-carousel-2, .production-carousel-3, .production-carousel-4, .production-carousel-5, .production-carousel-6").slick({
-		arrows: true,
-		fade: true,
-		infinite: true,
-		dots: false
 	});
 
 });

@@ -809,5 +809,20 @@
 </section>
   
   <script src="js/app.min.js"></script>
+  <script>
+    $('.fotorama').fotorama({
+      nav: 'thumbs',
+      fit: 'cover',
+      height: 300,
+      thumbheight: 73
+    });
+
+    $(".production-carousel-1, .production-carousel-2, .production-carousel-3").slick({
+      arrows: true,
+      fade: true,
+      infinite: true,
+      dots: false
+    });
+  </script>
 </body>
 </html>
