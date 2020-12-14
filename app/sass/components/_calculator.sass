@@ -40,8 +40,63 @@
     height: 54px
     padding-left: 20px
     border: 0
+    -webkit-appearance: none
+    -moz-appearance: none
+    appearance: none
+  &-textarea
+    display: block
+    width: 100%
+    border-radius: 3px
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.05)
+    background: #ffffff
+    padding-left: 20px
+    padding-top: 20px
+    border: 0
+  &-select
+    background: #fff url(../img/icons/select.svg) no-repeat right 14px center
+    cursor: pointer
   &-col-2
     width: calc(100% / 2 - 30px)
+  &-checkbox
+    margin-right: 40px
+    margin-top: 12px
+    display: block
+    input
+      @include visually-hidden
+      &:checked + span:after
+        background-color: $color-red
+        border: 1px solid $color-red
+    span
+      position: relative
+      padding-left: 26px
+      cursor: pointer
+      width: 100%
+      display: block
+      &:after
+        content: ''
+        position: absolute
+        top: 1px
+        left: 0
+        width: 16px
+        height: 16px
+        border-radius: 100%
+        border: 1px solid #DADADA
+        background-color: #ffffff
+        background-image: url(../img/icons/form-checkbox.svg)
+        background-repeat: no-repeat
+        background-position: center center
+        transition: .3s
+  &-type
+    @include flexbox
+    align-items: flex-start
+    b
+      width: 100%
+      display: block
+    .calculator-checkbox
+      width: 50%
+      margin-right: 0
+      &:last-child
+        padding-left: 15px
 
 @include media(xl) // 1200
   .calculator-right
@@ -54,11 +109,13 @@
   .calculator-right
     margin: 40px auto 0
 
-// @include media(md) // 768
-
 @include media(sm) // 576
   .calculator-col-2
     width: calc(100% - 30px)
+  .calculator-type .calculator-checkbox
+    width: 100%
+  .calculator-type .calculator-checkbox:last-child
+    padding-left: 0
 
 @include media(xs) //475
   .calculator
