@@ -1,0 +1,76 @@
+.thanks
+  background: $color-light-blue
+  padding: 110px 0 80px
+  margin-top: 130px
+  h1
+    font-size: 40px
+    text-align: center
+    font-weight: 400
+    text-align: center
+    b
+      color: $color-red
+      font-weight: 700
+  h4
+    font-size: 17px
+    opacity: 0.7
+    text-align: center
+    margin: 45px 0 0
+    font-weight: 400
+  &-phone
+    text-align: center
+    display: block
+    margin-top: 10px
+    a
+      font-size: 30px
+      color: $color-black
+  h2
+    font-size: 30px
+    text-align: center
+    margin: 45px 0 0
+  &-list
+    @include flexbox
+    margin: 0 -15px
+  &-item
+    width: calc(100% / 2 - 30px)
+    margin: 30px 15px 0
+    background: #ffffff
+    border-radius: 10px
+    box-shadow: 0px 22px 94px rgba(163, 169, 183, 0.2)
+    padding: 50px
+    img
+      height: 38px
+      margin-bottom: 10px
+    small
+      font-size: 14px
+      display: block
+      width: 100%
+      color: $color-gray
+    p
+      margin-top: 25px
+
+@include media(md) // 768
+  .thanks-item
+    width: calc(100% - 30px)
+
+@include media(xs) //475
+  .thanks
+    margin-top: 122px
+
+  .thanks
+    padding: 40px 0 50px
+    h1
+      font-size: 24px
+  
+  .thanks-phone a,
+  .thanks h2
+    font-size: 24px
+  
+  .thanks-item
+    padding: 30px 20px
+  
+  .thanks h4 br
+    display: none
+
+@include media(xxs) // 375
+  .thanks
+    margin-top: 106px
