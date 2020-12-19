@@ -15,7 +15,7 @@ $(document).ready(function(){
 		$(".js-scroll").on("click", function (event) {
 			event.preventDefault();
 			var id  = $(this).attr('href'),
-			top = $(id).offset().top - 30;
+			top = $(id).offset().top - 150;
 			$('html, body').animate({
 				scrollTop: top
 			}, 1500);
