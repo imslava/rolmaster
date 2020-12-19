@@ -146,18 +146,19 @@
           </label>
         </div>
         <div class="js-form-gate">
-          <form class="calculator-form">
+          <form class="calculator-form js-form" method="post">
+            <input type="hidden" name="form" value="Расчет - автоматические ворота" />
             <label class="calculator-label calculator-col-2">
               <b>Укажите высоту проема, мм</b>
-              <input type="text" name="" placeholder="Высота проема, мм" class="calculator-input" />
+              <input type="text" name="calc-1" placeholder="Высота проема, мм" class="calculator-input" />
             </label>
             <label class="calculator-label calculator-col-2">
               <b>Укажите ширину проема, мм</b>
-              <input type="text" name="" placeholder="Ширина проема, мм" class="calculator-input" />
+              <input type="text" name="calc-2" placeholder="Ширина проема, мм" class="calculator-input" />
             </label>
             <label class="calculator-label calculator-col-2">
               <b>Выберите шит ворот</b>
-              <select class="calculator-input calculator-select">
+              <select class="calculator-input calculator-select" name="calc-3">
                 <option selected disabled>Выберите...</option>
                 <option>Сплошной</option>
                 <option>Решетчатый</option>
@@ -165,7 +166,7 @@
             </label>
             <label class="calculator-label calculator-col-2">
               <b>Выберите обшивку</b>
-              <select class="calculator-input calculator-select">
+              <select class="calculator-input calculator-select" name="calc-4">
                 <option selected disabled>Выберите...</option>
                 <option>Двухсторонняя</option>
                 <option>Односторонняя</option>
@@ -173,7 +174,7 @@
             </label>
             <label class="calculator-label calculator-col-2">
               <b>Укажите материал обшивки</b>
-              <select class="calculator-input calculator-select">
+              <select class="calculator-input calculator-select" name="calc-5">
                 <option selected disabled>Выберите...</option>
                 <option>Стальные сэндвич панели</option>
                 <option>Профлист С10</option>
@@ -181,7 +182,7 @@
             </label>
             <label class="calculator-label calculator-col-2">
               <b>Выберите тип покраски</b>
-              <select class="calculator-input calculator-select">
+              <select class="calculator-input calculator-select" name="calc-6">
                 <option selected disabled>Выберите...</option>
                 <option>Стандартный цвет</option>
                 <option>Цвет на заказ</option>
@@ -189,7 +190,7 @@
             </label>
             <label class="calculator-label calculator-col-2">
               <b>Монтаж</b>
-              <select class="calculator-input calculator-select">
+              <select class="calculator-input calculator-select" name="calc-7">
                 <option selected disabled>Выберите...</option>
                 <option>Силами РолМастер (1 год гарантии)</option>
                 <option>Силами заказчика (без гарантии)</option>
@@ -197,7 +198,7 @@
             </label>
             <label class="calculator-label calculator-col-2">
               <b>Укажите тип управления</b>
-              <select class="calculator-input calculator-select">
+              <select class="calculator-input calculator-select" name="calc-8">
                 <option selected disabled>Выберите...</option>
                 <option>Ручное (механическое)</option>
                 <option>Дистанционное (автоматическое)</option>
@@ -206,17 +207,17 @@
             <label class="calculator-label calculator-col-2">
               <b>Дополнительные аксессуары</b>
               <label class="calculator-checkbox">
-                <input type="checkbox" />
+                <input name="calc-9[]" type="checkbox" value="Лучевой барьер" />
                 <span>Лучевой барьер</span>
               </label>
               <label class="calculator-checkbox">
-                <input type="checkbox" />
+                <input name="calc-9[]" type="checkbox" value="Сигнальная лампа" />
                 <span>Сигнальная лампа</span>
               </label>
             </label>
             <label class="calculator-label calculator-col-2">
               <b>Дополнительные брелки</b>
-              <select class="calculator-input calculator-select">
+              <select class="calculator-input calculator-select" name="calc-10">
                 <option>Нет</option>
                 <option>1 шт.</option>
                 <option>2 шт.</option>
@@ -227,15 +228,15 @@
             </label>
             <label class="calculator-label">
               <b>Укажите адрес, где будет производится монтаж</b>
-              <input type="text" name="" placeholder="г. Москва, ул. Механическая 12а" class="calculator-input" />
+              <input type="text" name="calc-11" placeholder="г. Москва, ул. Механическая 12а" class="calculator-input" />
             </label>
             <label class="calculator-label">
               <b>Укажите дополнительные пожелания по заказу</b>
-              <textarea name="" cols="30" rows="10" class="calculator-textarea" placeholder="Например: Требуется постгарантийное обслуживание"></textarea>
+              <textarea name="calc-12" cols="30" rows="10" class="calculator-textarea" placeholder="Например: Требуется постгарантийное обслуживание"></textarea>
             </label>
             <label class="calculator-label">
               <b>Укажите номер телефона</b>
-              <input type="text" name="" placeholder="Введите номер телефона" class="calculator-input masked" />
+              <input type="text" name="phone" placeholder="Введите номер телефона" class="calculator-input masked" />
             </label>
             <label class="calculator-label">
               <div class="btn"><button class="btn-red">Получить расчет за 20 минут</button></div>
@@ -243,18 +244,19 @@
           </form>
         </div>
         <div class="js-form-rollet" style="display: none;">
-          <form class="calculator-form">
+          <form class="calculator-form js-form" method="post">
+            <input type="hidden" name="form" value="Расчет - рольставни" />
             <label class="calculator-label calculator-col-2">
               <b>Укажите высоту проема, мм</b>
-              <input type="text" name="" placeholder="Высота проема, мм" class="calculator-input" />
+              <input type="text" name="calc-1" placeholder="Высота проема, мм" class="calculator-input" />
             </label>
             <label class="calculator-label calculator-col-2">
               <b>Укажите ширину проема, мм</b>
-              <input type="text" name="" placeholder="Ширина проема, мм" class="calculator-input" />
+              <input type="text" name="calc-2" placeholder="Ширина проема, мм" class="calculator-input" />
             </label>
             <label class="calculator-label">
               <b>Укажите тип профиля</b>
-              <select class="calculator-input calculator-select">
+              <select class="calculator-input calculator-select" name="calc-3">
                 <option selected disabled>Выберите...</option>
                 <option>Перфорированный СТ-105П</option>
                 <option>Перфорированный СТ-75П</option>
@@ -267,7 +269,7 @@
             </label>
             <label class="calculator-label">
               <b>Как будут ставиться рольставни?</b>
-              <select class="calculator-input calculator-select">
+              <select class="calculator-input calculator-select" name="calc-4">
                 <option selected disabled>Выберите...</option>
                 <option>Внахлест</option>
                 <option>В торец</option>
@@ -275,7 +277,7 @@
             </label>
             <label class="calculator-label calculator-col-2">
               <b>Будет защитный короб?</b>
-              <select class="calculator-input calculator-select">
+              <select class="calculator-input calculator-select" name="calc-5">
                 <option selected disabled>Выберите...</option>
                 <option>Будет</option>
                 <option>Не будет</option>
@@ -283,7 +285,7 @@
             </label>
             <label class="calculator-label calculator-col-2">
               <b>Укажите тип привода</b>
-              <select class="calculator-input calculator-select">
+              <select class="calculator-input calculator-select" name="calc-6">
                 <option selected disabled>Выберите...</option>
                 <option>Ручной (торсионная пружина)</option>
                 <option>Электропривод</option>
@@ -291,7 +293,7 @@
             </label>
             <label class="calculator-label calculator-col-2">
               <b>Монтаж</b>
-              <select class="calculator-input calculator-select">
+              <select class="calculator-input calculator-select" name="calc-7">
                 <option selected disabled>Выберите...</option>
                 <option>Силами РолМастер (1 год гарантии)</option>
                 <option>Силами заказчика (без гарантии)</option>
@@ -299,7 +301,7 @@
             </label>
             <label class="calculator-label calculator-col-2">
               <b>Выберите тип покраски</b>
-              <select class="calculator-input calculator-select">
+              <select class="calculator-input calculator-select" name="calc-8">
                 <option selected disabled>Выберите...</option>
                 <option>Стандартный цвет</option>
                 <option>Цвет на заказ</option>
@@ -308,17 +310,17 @@
             <label class="calculator-label calculator-col-2">
               <b>Дополнительные аксессуары</b>
               <label class="calculator-checkbox">
-                <input type="checkbox" />
+                <input type="checkbox" name="calc-9[]" value="Лучевой барьер" />
                 <span>Лучевой барьер</span>
               </label>
               <label class="calculator-checkbox">
-                <input type="checkbox" />
+                <input type="checkbox" name="calc-9[]" value="Сигнальная лампа" />
                 <span>Сигнальная лампа</span>
               </label>
             </label>
             <label class="calculator-label calculator-col-2">
               <b>Дополнительные брелки</b>
-              <select class="calculator-input calculator-select">
+              <select class="calculator-input calculator-select" name="calc-10">
                 <option>Нет</option>
                 <option>1 шт.</option>
                 <option>2 шт.</option>
@@ -329,15 +331,15 @@
             </label>
             <label class="calculator-label">
               <b>Укажите адрес, где будет производится монтаж</b>
-              <input type="text" name="" placeholder="г. Москва, ул. Механическая 12а" class="calculator-input" />
+              <input type="text" name="calc-11" placeholder="г. Москва, ул. Механическая 12а" class="calculator-input" />
             </label>
             <label class="calculator-label">
               <b>Укажите дополнительные пожелания по заказу</b>
-              <textarea name="" cols="30" rows="10" class="calculator-textarea" placeholder="Например: Требуется постгарантийное обслуживание"></textarea>
+              <textarea name="calc-12" cols="30" rows="10" class="calculator-textarea" placeholder="Например: Требуется постгарантийное обслуживание"></textarea>
             </label>
             <label class="calculator-label">
               <b>Укажите номер телефона</b>
-              <input type="text" name="" placeholder="Введите номер телефона" class="calculator-input masked" />
+              <input type="text" name="phone" placeholder="Введите номер телефона" class="calculator-input masked" />
             </label>
             <label class="calculator-label">
               <div class="btn"><button class="btn-red">Получить расчет за 20 минут</button></div>
@@ -361,6 +363,7 @@
               <span></span>
               <p>Вы соглашаетесь с условиями обработки<br> персональных данных (<a href="politic.html">ознакомиться</a>)</p>
             </label>
+            <input type="hidden" name="form" value="Нужна помощь в расчетах" />
           </form>
         </div>
         <div class="form">
@@ -384,6 +387,7 @@
               <span></span>
               <p>Вы соглашаетесь с условиями обработки<br> персональных данных (<a href="politic.html">ознакомиться</a>)</p>
             </label>
+            <input type="hidden" name="form" value="Рассчитать по ТЗ" />
           </form>
         </div>
       </div>

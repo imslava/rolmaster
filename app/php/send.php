@@ -49,6 +49,47 @@
             $time_str = "<b>Время замера:</b><br>".$time." (".$date.")<br><br>";
         }
 
+        date_default_timezone_set('Europe/Moscow');
+        $datelead = date('d.m.Y H:i:s');
+
+        if($form == 'Расчет - автоматические ворота'){
+            $message = "<b>Форма:</b><br>".$form."<br><br>
+                        <b>Время заявки:</b><br>".$datelead."
+                        <hr>
+                        <b>Высота проема, мм:</b><br>".$_POST['calc-1']."<br><br>
+                        <b>Ширина проема, мм:</b><br>".$_POST['calc-2']."<br><br>
+                        <b>Шит ворот:</b><br>".$_POST['calc-3']."<br><br>
+                        <b>Обшивка:</b><br>".$_POST['calc-4']."<br><br>
+                        <b>Материал обшивки:</b><br>".$_POST['calc-5']."<br><br>
+                        <b>Тип покраски:</b><br>".$_POST['calc-6']."<br><br>
+                        <b>Монтаж:</b><br>".$_POST['calc-7']."<br><br>
+                        <b>Тип управления:</b><br>".$_POST['calc-8']."<br><br>
+                        <b>Дополнительные аксессуары:</b><br>".implode(", ", $_POST['calc-9'])."<br><br>
+                        <b>Дополнительные брелки:</b><br>".$_POST['calc-10']."<br><br>
+                        <b>Адрес, где будет производится монтаж:</b><br>".$_POST['calc-11']."<br><br>
+                        <b>Дополнительные пожелания по заказу:</b><br>".$_POST['calc-12']."<br><br>
+                        <b>Номер телефона:</b><br>".$_POST['phone'];
+        }elseif($form == 'Расчет - рольставни'){
+            $message = "<b>Форма:</b><br>".$form."<br><br>
+                        <b>Время заявки:</b><br>".$datelead."
+                        <hr>
+                        <b>Высота проема, мм:</b><br>".$_POST['calc-1']."<br><br>
+                        <b>Ширина проема, мм:</b><br>".$_POST['calc-2']."<br><br>
+                        <b>Тип профиля:</b><br>".$_POST['calc-3']."<br><br>
+                        <b>Как будут ставиться рольставни:</b><br>".$_POST['calc-4']."<br><br>
+                        <b>Защитный короб:</b><br>".$_POST['calc-5']."<br><br>
+                        <b>Тип привода:</b><br>".$_POST['calc-6']."<br><br>
+                        <b>Тип покраски:</b><br>".$_POST['calc-7']."<br><br>
+                        <b>Монтаж:</b><br>".$_POST['calc-8']."<br><br>
+                        <b>Дополнительные аксессуары:</b><br>".implode(", ", $_POST['calc-9'])."<br><br>
+                        <b>Дополнительные брелки:</b><br>".$_POST['calc-10']."<br><br>
+                        <b>Адрес, где будет производится монтаж:</b><br>".$_POST['calc-11']."<br><br>
+                        <b>Дополнительные пожелания по заказу:</b><br>".$_POST['calc-12']."<br><br>
+                        <b>Номер телефона:</b><br>".$_POST['phone'];
+        }else{
+            $message = "<b>Форма:</b><br>".$form."<br><br><b>Время заявки:</b><br>".$datelead."<hr>".$name_str.$email_str.$phone_str.$city_str.$time_str;
+        }
+
         //Отправка на почту
         $mail = new PHPMailer(true);
         $mail->CharSet = 'UTF-8';
@@ -72,7 +113,7 @@
             // Письмо
             $mail->isHTML(true); 
             $mail->Subject = $form;
-            $mail->Body = "<b>Форма:</b><br>".$form."<hr>".$name_str.$email_str.$phone_str.$city_str.$time_str;
+            $mail->Body = $message;
 
             if ($mail->send()) {    
                 $files = glob('../upload/*'); 
