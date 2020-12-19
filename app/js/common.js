@@ -136,26 +136,26 @@ $(document).ready(function(){
 	});
 	
 	function submitForm(form) {
-	
-		var url = window.location.origin + '/php/send.php';
+
+		var form_data = new FormData(form);
 	
 		$.ajax({
 			type: "POST",
-			url: url,
-			data: $(form).serialize()
-			// success: function (data) {
-			//   console.log('ok');
-			// }
+			url: 'php/send.php',
+			data: form_data,
+			cache: false, 
+			processData: false,
+    	contentType: false,
+			success: function(response) {
+				// console.log(response);
+				// console.log(form_data);
+				$(location).attr('href', 'thanks.html');
+			}  
 		});
-		$.fancybox.close();
-		$(location).attr('href', window.location.origin + '/thanks.html');
-	
-		// if(!pdf){
-		// 	$.fancybox.open($("#thanks-popup"), { touch: false });
-		// }else{
-		// 	$.fancybox.open($("#pdf-popup"), { touch: false });
-		// 	setTimeout('location="'+ decodeURIComponent(pdf.slice(4)) +'";', 3000);
-		// }
+		// $.fancybox.close();
+		// $('.js-form input[name="name"], .js-form input[name="phone"], .js-form input[name="email"], .js-form input[name="date"], .js-form input[name="city"]').val('');
+
+		$('.js-form .btn-red').prop('disabled', true).addClass('load');
 	
 		return false;
 	}

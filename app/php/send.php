@@ -46,7 +46,7 @@
         if($time == ""){
             $time_str = "";
         }else{
-            $time_str = "<b>Время замера:</b><br>".$time." ".$date."<br><br>";
+            $time_str = "<b>Время замера:</b><br>".$time." (".$date.")<br><br>";
         }
 
         //Отправка на почту
@@ -72,7 +72,7 @@
             // Письмо
             $mail->isHTML(true); 
             $mail->Subject = $form;
-            $mail->Body = "<b>Форма:</b><br>".$title."<hr>".$name_str.$email_str.$phone_str.$city_str.$time_str;
+            $mail->Body = "<b>Форма:</b><br>".$form."<hr>".$name_str.$email_str.$phone_str.$city_str.$time_str;
 
             if ($mail->send()) {    
                 $files = glob('../upload/*'); 
