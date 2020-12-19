@@ -73,6 +73,8 @@ function buildcopy() {
 		'app/files/**/*',
 		'app/fonts/**/*',
 		'app/favicon/**/*',
+		'app/upload/**/*',
+		'app/php/**/*',
 		'app/*.html',
 		], { base: 'app' })
 	.pipe(dest('dist'))
