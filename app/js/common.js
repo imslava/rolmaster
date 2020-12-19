@@ -68,6 +68,7 @@ $(document).ready(function(){
 	    var btn = slide.opts.$orig.data('btn');
 	    $('#popup-engineer h3 b').html(title);
 	    $('#popup-engineer button').html(btn);
+	    $('#popup-engineer input[name="form"]').val(btn);
 	  }
 	});
 
@@ -136,7 +137,6 @@ $(document).ready(function(){
 	
 	function submitForm(form) {
 	
-		// var pdf = $(form.pdf).serialize(); 
 		var url = window.location.origin + '/php/send.php';
 	
 		$.ajax({
@@ -148,9 +148,7 @@ $(document).ready(function(){
 			// }
 		});
 		$.fancybox.close();
-		$('.js-form input[name="name"], .js-form input[name="phone"], .js-form input[name="email"], .js-form input[name="date"], .js-form input[name="city"]').val('');
-
-		$.fancybox.open($("#thanks-popup"), { touch: false });
+		$(location).attr('href', window.location.origin + '/thanks.html');
 	
 		// if(!pdf){
 		// 	$.fancybox.open($("#thanks-popup"), { touch: false });

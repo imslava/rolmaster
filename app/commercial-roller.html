@@ -43,6 +43,7 @@
         <span></span>
         <p>Вы соглашаетесь с условиями обработки<br> персональных данных (<a href="politic.html">ознакомиться</a>)</p>
       </label>
+      <input type="hidden" name="form" value="" />
     </form>
   </div>
 </div>
@@ -83,6 +84,7 @@
         <span></span>
         <p>Вы соглашаетесь с условиями обработки<br> персональных данных (<a href="politic.html">ознакомиться</a>)</p>
       </label>
+      <input type="hidden" name="form" value="Вызвать замерщика" />
     </form>
   </div>
 </div>
@@ -263,7 +265,7 @@
     </div>
     <div class="form ctaKP-form">
       <h3><b>Получите коммерческое<br> предложение</b> <i>по вашему</i><br> техническому заданию</h3>
-      <form method="post" class="js-form">
+      <form method="post" class="js-form" enctype="multipart/form-data">
         <label class="form-label">
           <span>Менеджер свяжется с вами,<br> чтобы уточнить детали заказа</span>
           <input type="tel" name="phone" class="form-input masked" placeholder="Введите номер телефона" />
@@ -274,7 +276,7 @@
         </label>
         <label class="form-label form-file">
           <span>Загрузите техническое задание (при наличии)</span>
-          <input type="file" name="file">
+          <input type="file" name="file" name="userfile[]" multiple />
           <p>Загрузить техническое задание</p>
         </label>
         <div class="btn"><button class="btn-red">Получить предложение за 29 минут</button></div>
@@ -283,6 +285,7 @@
           <span></span>
           <p>Вы соглашаетесь с условиями обработки<br> персональных данных (<a href="politic.html">ознакомиться</a>)</p>
         </label>
+        <input type="hidden" name="form" value="Получить коммерческое предложение" />
       </form>
     </div>
   </div>
@@ -355,7 +358,7 @@
     </div>
     <div class="form ctaKP-form">
       <h3><b>Получите коммерческое<br> предложение</b> <i>по вашему</i><br> техническому заданию</h3>
-      <form method="post" class="js-form">
+      <form method="post" class="js-form" enctype="multipart/form-data">
         <label class="form-label">
           <span>Менеджер свяжется с вами,<br> чтобы уточнить детали заказа</span>
           <input type="tel" name="phone" class="form-input masked" placeholder="Введите номер телефона" />
@@ -366,7 +369,7 @@
         </label>
         <label class="form-label form-file">
           <span>Загрузите техническое задание (при наличии)</span>
-          <input type="file" name="file">
+          <input type="file" name="file" name="userfile[]" multiple />
           <p>Загрузить техническое задание</p>
         </label>
         <div class="btn"><button class="btn-red">Получить предложение за 29 минут</button></div>
@@ -375,6 +378,7 @@
           <span></span>
           <p>Вы соглашаетесь с условиями обработки<br> персональных данных (<a href="politic.html">ознакомиться</a>)</p>
         </label>
+        <input type="hidden" name="form" value="Получить коммерческое предложение" />
       </form>
     </div>
   </div>
@@ -540,6 +544,7 @@
         <span></span>
         <p>Вы соглашаетесь с условиями обработки<br> персональных данных (<a href="politic.html">ознакомиться</a>)</p>
       </label>
+      <input type="hidden" name="form" value="Получить договор" />
     </form>
   </div>
 </div>
@@ -663,6 +668,7 @@
             <span></span>
             <p>Вы соглашаетесь с условиями обработки<br> персональных данных (<a href="politic.html">ознакомиться</a>)</p>
           </label>
+          <input type="hidden" name="form" value="Получить список монтажных компаний" />
         </form>
       </div>
       <img src="img/delivery-car.jpg" alt="" class="delivery-car">
@@ -735,6 +741,7 @@
       <form method="post" class="js-form">
         <input type="tel" name="phone" placeholder="+7 (900) 000-00-00" class="input input-voice masked" />
         <button class="btn-red">Обсудить задачу с экспертом</button>
+        <input type="hidden" name="form" value="Обсудить задачу с экспертом" />
       </form>
     </div>
     <img src="img/expert-man.png" class="expert-man" alt="">
@@ -779,6 +786,7 @@
         <span></span>
         <p>Вы соглашаетесь с условиями обработки<br> персональных данных (<a href="politic.html">ознакомиться</a>)</p>
       </label>
+      <input type="hidden" name="form" value="Узнать как стать дилером" />
     </form>
   </div>
 </div>

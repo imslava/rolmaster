@@ -43,6 +43,7 @@
         <span></span>
         <p>Вы соглашаетесь с условиями обработки<br> персональных данных (<a href="politic.html">ознакомиться</a>)</p>
       </label>
+      <input type="hidden" name="form" value="" />
     </form>
   </div>
 </div>
@@ -83,6 +84,7 @@
         <span></span>
         <p>Вы соглашаетесь с условиями обработки<br> персональных данных (<a href="politic.html">ознакомиться</a>)</p>
       </label>
+      <input type="hidden" name="form" value="Вызвать замерщика" />
     </form>
   </div>
 </div>
@@ -363,13 +365,13 @@
         </div>
         <div class="form">
           <h3><b>У вас есть техническое задание?</b></h3>
-          <form method="post" class="js-form">
+          <form method="post" class="js-form" enctype="multipart/form-data">
             <label class="form-label">
               <span>Просто прикрепите его ниже, <br>мы сделаем все расчеты самостоятельно</span>
             </label>
             <label class="form-label form-file">
               <span>Загрузите техническое задание (при наличии)</span>
-              <input type="file" name="file">
+              <input type="file" name="file" name="userfile[]" multiple />
               <p>Загрузить техническое задание</p>
             </label>
             <label class="form-label">
@@ -428,6 +430,7 @@
         <span></span>
         <p>Вы соглашаетесь с условиями обработки<br> персональных данных (<a href="politic.html">ознакомиться</a>)</p>
       </label>
+      <input type="hidden" name="form" value="Узнать как стать дилером" />
     </form>
   </div>
 </div>

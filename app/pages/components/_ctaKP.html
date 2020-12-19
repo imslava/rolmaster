@@ -24,7 +24,7 @@
     </div>
     <div class="form ctaKP-form">
       <h3><b>Получите коммерческое<br> предложение</b> <i>по вашему</i><br> техническому заданию</h3>
-      <form method="post" class="js-form">
+      <form method="post" class="js-form" enctype="multipart/form-data">
         <label class="form-label">
           <span>Менеджер свяжется с вами,<br> чтобы уточнить детали заказа</span>
           <input type="tel" name="phone" class="form-input masked" placeholder="Введите номер телефона" />
@@ -35,7 +35,7 @@
         </label>
         <label class="form-label form-file">
           <span>Загрузите техническое задание (при наличии)</span>
-          <input type="file" name="file">
+          <input type="file" name="file" name="userfile[]" multiple />
           <p>Загрузить техническое задание</p>
         </label>
         <div class="btn"><button class="btn-red">Получить предложение за 29 минут</button></div>
@@ -44,6 +44,7 @@
           <span></span>
           <p>Вы соглашаетесь с условиями обработки<br> персональных данных (<a href="politic.html">ознакомиться</a>)</p>
         </label>
+        <input type="hidden" name="form" value="Получить коммерческое предложение" />
       </form>
     </div>
   </div>
